@@ -1,0 +1,422 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		390B04C61C14CD290044D83D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390B04C51C14CD290044D83D /* AppDelegate.swift */; };
+		390B04C81C14CD290044D83D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390B04C71C14CD290044D83D /* ViewController.swift */; };
+		390B04CB1C14CD290044D83D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 390B04C91C14CD290044D83D /* Main.storyboard */; };
+		390B04CE1C14CD290044D83D /* ClipperFan.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 390B04CC1C14CD290044D83D /* ClipperFan.xcdatamodeld */; };
+		390B04D01C14CD290044D83D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 390B04CF1C14CD290044D83D /* Assets.xcassets */; };
+		390B04D31C14CD290044D83D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 390B04D11C14CD290044D83D /* LaunchScreen.storyboard */; };
+		390B04DE1C14CD290044D83D /* ClipperFanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390B04DD1C14CD290044D83D /* ClipperFanTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		390B04DA1C14CD290044D83D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 390B04BA1C14CD290044D83D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 390B04C11C14CD290044D83D;
+			remoteInfo = ClipperFan;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		390B04C21C14CD290044D83D /* ClipperFan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClipperFan.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		390B04C51C14CD290044D83D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		390B04C71C14CD290044D83D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		390B04CA1C14CD290044D83D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		390B04CD1C14CD290044D83D /* ClipperFan.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ClipperFan.xcdatamodel; sourceTree = "<group>"; };
+		390B04CF1C14CD290044D83D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		390B04D21C14CD290044D83D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		390B04D41C14CD290044D83D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		390B04D91C14CD290044D83D /* ClipperFanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClipperFanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		390B04DD1C14CD290044D83D /* ClipperFanTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipperFanTests.swift; sourceTree = "<group>"; };
+		390B04DF1C14CD290044D83D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		390B04BF1C14CD290044D83D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		390B04D61C14CD290044D83D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		390B04B91C14CD290044D83D = {
+			isa = PBXGroup;
+			children = (
+				390B04C41C14CD290044D83D /* ClipperFan */,
+				390B04DC1C14CD290044D83D /* ClipperFanTests */,
+				390B04C31C14CD290044D83D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		390B04C31C14CD290044D83D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				390B04C21C14CD290044D83D /* ClipperFan.app */,
+				390B04D91C14CD290044D83D /* ClipperFanTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		390B04C41C14CD290044D83D /* ClipperFan */ = {
+			isa = PBXGroup;
+			children = (
+				390B04C51C14CD290044D83D /* AppDelegate.swift */,
+				390B04C71C14CD290044D83D /* ViewController.swift */,
+				390B04C91C14CD290044D83D /* Main.storyboard */,
+				390B04CF1C14CD290044D83D /* Assets.xcassets */,
+				390B04D11C14CD290044D83D /* LaunchScreen.storyboard */,
+				390B04D41C14CD290044D83D /* Info.plist */,
+				390B04CC1C14CD290044D83D /* ClipperFan.xcdatamodeld */,
+			);
+			path = ClipperFan;
+			sourceTree = "<group>";
+		};
+		390B04DC1C14CD290044D83D /* ClipperFanTests */ = {
+			isa = PBXGroup;
+			children = (
+				390B04DD1C14CD290044D83D /* ClipperFanTests.swift */,
+				390B04DF1C14CD290044D83D /* Info.plist */,
+			);
+			path = ClipperFanTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		390B04C11C14CD290044D83D /* ClipperFan */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 390B04E21C14CD290044D83D /* Build configuration list for PBXNativeTarget "ClipperFan" */;
+			buildPhases = (
+				390B04BE1C14CD290044D83D /* Sources */,
+				390B04BF1C14CD290044D83D /* Frameworks */,
+				390B04C01C14CD290044D83D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ClipperFan;
+			productName = ClipperFan;
+			productReference = 390B04C21C14CD290044D83D /* ClipperFan.app */;
+			productType = "com.apple.product-type.application";
+		};
+		390B04D81C14CD290044D83D /* ClipperFanTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 390B04E51C14CD290044D83D /* Build configuration list for PBXNativeTarget "ClipperFanTests" */;
+			buildPhases = (
+				390B04D51C14CD290044D83D /* Sources */,
+				390B04D61C14CD290044D83D /* Frameworks */,
+				390B04D71C14CD290044D83D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				390B04DB1C14CD290044D83D /* PBXTargetDependency */,
+			);
+			name = ClipperFanTests;
+			productName = ClipperFanTests;
+			productReference = 390B04D91C14CD290044D83D /* ClipperFanTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		390B04BA1C14CD290044D83D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Maqix Corp.";
+				TargetAttributes = {
+					390B04C11C14CD290044D83D = {
+						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = 6HLTQLM42F;
+					};
+					390B04D81C14CD290044D83D = {
+						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = 6HLTQLM42F;
+						TestTargetID = 390B04C11C14CD290044D83D;
+					};
+				};
+			};
+			buildConfigurationList = 390B04BD1C14CD290044D83D /* Build configuration list for PBXProject "ClipperFan" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 390B04B91C14CD290044D83D;
+			productRefGroup = 390B04C31C14CD290044D83D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				390B04C11C14CD290044D83D /* ClipperFan */,
+				390B04D81C14CD290044D83D /* ClipperFanTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		390B04C01C14CD290044D83D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				390B04D31C14CD290044D83D /* LaunchScreen.storyboard in Resources */,
+				390B04D01C14CD290044D83D /* Assets.xcassets in Resources */,
+				390B04CB1C14CD290044D83D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		390B04D71C14CD290044D83D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		390B04BE1C14CD290044D83D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				390B04C81C14CD290044D83D /* ViewController.swift in Sources */,
+				390B04C61C14CD290044D83D /* AppDelegate.swift in Sources */,
+				390B04CE1C14CD290044D83D /* ClipperFan.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		390B04D51C14CD290044D83D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				390B04DE1C14CD290044D83D /* ClipperFanTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		390B04DB1C14CD290044D83D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 390B04C11C14CD290044D83D /* ClipperFan */;
+			targetProxy = 390B04DA1C14CD290044D83D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		390B04C91C14CD290044D83D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				390B04CA1C14CD290044D83D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		390B04D11C14CD290044D83D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				390B04D21C14CD290044D83D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		390B04E01C14CD290044D83D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		390B04E11C14CD290044D83D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		390B04E31C14CD290044D83D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ClipperFan/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Maqix.ClipperFan;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		390B04E41C14CD290044D83D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ClipperFan/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Maqix.ClipperFan;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		390B04E61C14CD290044D83D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ClipperFanTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Maqix.ClipperFanTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ClipperFan.app/ClipperFan";
+			};
+			name = Debug;
+		};
+		390B04E71C14CD290044D83D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ClipperFanTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Maqix.ClipperFanTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ClipperFan.app/ClipperFan";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		390B04BD1C14CD290044D83D /* Build configuration list for PBXProject "ClipperFan" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				390B04E01C14CD290044D83D /* Debug */,
+				390B04E11C14CD290044D83D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		390B04E21C14CD290044D83D /* Build configuration list for PBXNativeTarget "ClipperFan" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				390B04E31C14CD290044D83D /* Debug */,
+				390B04E41C14CD290044D83D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		390B04E51C14CD290044D83D /* Build configuration list for PBXNativeTarget "ClipperFanTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				390B04E61C14CD290044D83D /* Debug */,
+				390B04E71C14CD290044D83D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		390B04CC1C14CD290044D83D /* ClipperFan.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				390B04CD1C14CD290044D83D /* ClipperFan.xcdatamodel */,
+			);
+			currentVersion = 390B04CD1C14CD290044D83D /* ClipperFan.xcdatamodel */;
+			path = ClipperFan.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 390B04BA1C14CD290044D83D /* Project object */;
+}
