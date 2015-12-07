@@ -107,5 +107,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
 
+    
+    func saveAction(sender: AnyObject!) {
+        // Performs the save action for the application, which is to send the save: message to the application's managed object context. Any encountered errors are presented to the user.
+        let moc = self.managedObjectContext
+            if moc.hasChanges {
+                do {
+                    try moc.save()
+                } catch let error1 as NSError {
+                    print(error1)
+                }
+            }
+        
+    }
 }
 

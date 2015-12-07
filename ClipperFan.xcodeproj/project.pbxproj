@@ -14,8 +14,10 @@
 		390B04D01C14CD290044D83D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 390B04CF1C14CD290044D83D /* Assets.xcassets */; };
 		390B04D31C14CD290044D83D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 390B04D11C14CD290044D83D /* LaunchScreen.storyboard */; };
 		390B04DE1C14CD290044D83D /* ClipperFanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390B04DD1C14CD290044D83D /* ClipperFanTests.swift */; };
-		390B053E1C158A300044D83D /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 390B052F1C158A0D0044D83D /* SQLite.framework */; };
-		390B05401C158B9F0044D83D /* ClipperFanDB in Resources */ = {isa = PBXBuildFile; fileRef = 390B053F1C158B9F0044D83D /* ClipperFanDB */; };
+		390B05421C158D5B0044D83D /* ClipperController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390B05411C158D5B0044D83D /* ClipperController.swift */; };
+		390B05471C158F0E0044D83D /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390B05461C158F0E0044D83D /* Util.swift */; };
+		390B054A1C1593800044D83D /* Clipper+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390B05481C1593800044D83D /* Clipper+CoreDataProperties.swift */; };
+		390B054B1C1593800044D83D /* Clipper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390B05491C1593800044D83D /* Clipper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,62 +27,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 390B04C11C14CD290044D83D;
 			remoteInfo = ClipperFan;
-		};
-		390B052E1C158A0D0044D83D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 390B05221C158A0D0044D83D /* SQLite.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = DC2B29E21B26F718001C60EA;
-			remoteInfo = "SQLite iOS";
-		};
-		390B05301C158A0D0044D83D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 390B05221C158A0D0044D83D /* SQLite.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = DC2B29EC1B26F718001C60EA;
-			remoteInfo = "SQLite iOS Tests";
-		};
-		390B05321C158A0D0044D83D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 390B05221C158A0D0044D83D /* SQLite.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = DC7253AC1B52ADEB009B38B1;
-			remoteInfo = "SQLite Mac";
-		};
-		390B05341C158A0D0044D83D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 390B05221C158A0D0044D83D /* SQLite.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = DC7253B51B52ADEC009B38B1;
-			remoteInfo = "SQLite Mac Tests";
-		};
-		390B05361C158A0D0044D83D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 390B05221C158A0D0044D83D /* SQLite.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = DCE7BB7A1B7434F90040D364;
-			remoteInfo = "SQLiteCipher iOS";
-		};
-		390B05381C158A0D0044D83D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 390B05221C158A0D0044D83D /* SQLite.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = DCE7BB831B7434F90040D364;
-			remoteInfo = "SQLiteCipher iOS Tests";
-		};
-		390B053A1C158A0D0044D83D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 390B05221C158A0D0044D83D /* SQLite.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = DCE7BBB01B7438610040D364;
-			remoteInfo = "SQLiteCipher Mac";
-		};
-		390B053C1C158A0D0044D83D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 390B05221C158A0D0044D83D /* SQLite.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = DCE7BBB91B7438620040D364;
-			remoteInfo = "SQLiteCipher Mac Tests";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -96,8 +42,10 @@
 		390B04D91C14CD290044D83D /* ClipperFanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClipperFanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		390B04DD1C14CD290044D83D /* ClipperFanTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipperFanTests.swift; sourceTree = "<group>"; };
 		390B04DF1C14CD290044D83D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		390B05221C158A0D0044D83D /* SQLite.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SQLite.xcodeproj; path = "../../../Downloads/SQLite-2.swift-master/SQLite.xcodeproj"; sourceTree = "<group>"; };
-		390B053F1C158B9F0044D83D /* ClipperFanDB */ = {isa = PBXFileReference; lastKnownFileType = file; path = ClipperFanDB; sourceTree = "<group>"; };
+		390B05411C158D5B0044D83D /* ClipperController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClipperController.swift; sourceTree = "<group>"; };
+		390B05461C158F0E0044D83D /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		390B05481C1593800044D83D /* Clipper+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Clipper+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		390B05491C1593800044D83D /* Clipper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Clipper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +53,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				390B053E1C158A300044D83D /* SQLite.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,7 +69,8 @@
 		390B04B91C14CD290044D83D = {
 			isa = PBXGroup;
 			children = (
-				390B05221C158A0D0044D83D /* SQLite.xcodeproj */,
+				390B05481C1593800044D83D /* Clipper+CoreDataProperties.swift */,
+				390B05491C1593800044D83D /* Clipper.swift */,
 				390B04C41C14CD290044D83D /* ClipperFan */,
 				390B04DC1C14CD290044D83D /* ClipperFanTests */,
 				390B04C31C14CD290044D83D /* Products */,
@@ -142,13 +90,14 @@
 			isa = PBXGroup;
 			children = (
 				390B04C51C14CD290044D83D /* AppDelegate.swift */,
-				390B04C71C14CD290044D83D /* ViewController.swift */,
+				390B05461C158F0E0044D83D /* Util.swift */,
+				390B05431C158D620044D83D /* ViewControllers */,
+				390B05451C158D740044D83D /* Controllers */,
 				390B04C91C14CD290044D83D /* Main.storyboard */,
 				390B04CF1C14CD290044D83D /* Assets.xcassets */,
 				390B04D11C14CD290044D83D /* LaunchScreen.storyboard */,
 				390B04D41C14CD290044D83D /* Info.plist */,
 				390B04CC1C14CD290044D83D /* ClipperFan.xcdatamodeld */,
-				390B053F1C158B9F0044D83D /* ClipperFanDB */,
 			);
 			path = ClipperFan;
 			sourceTree = "<group>";
@@ -162,19 +111,20 @@
 			path = ClipperFanTests;
 			sourceTree = "<group>";
 		};
-		390B05231C158A0D0044D83D /* Products */ = {
+		390B05431C158D620044D83D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				390B052F1C158A0D0044D83D /* SQLite.framework */,
-				390B05311C158A0D0044D83D /* SQLite iOS Tests.xctest */,
-				390B05331C158A0D0044D83D /* SQLite.framework */,
-				390B05351C158A0D0044D83D /* SQLite Mac Tests.xctest */,
-				390B05371C158A0D0044D83D /* SQLiteCipher.framework */,
-				390B05391C158A0D0044D83D /* SQLiteCipher iOS Tests.xctest */,
-				390B053B1C158A0D0044D83D /* SQLiteCipher.framework */,
-				390B053D1C158A0D0044D83D /* SQLiteCipher Mac Tests.xctest */,
+				390B04C71C14CD290044D83D /* ViewController.swift */,
 			);
-			name = Products;
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		390B05451C158D740044D83D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				390B05411C158D5B0044D83D /* ClipperController.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,12 +197,6 @@
 			mainGroup = 390B04B91C14CD290044D83D;
 			productRefGroup = 390B04C31C14CD290044D83D /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 390B05231C158A0D0044D83D /* Products */;
-					ProjectRef = 390B05221C158A0D0044D83D /* SQLite.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				390B04C11C14CD290044D83D /* ClipperFan */,
@@ -261,65 +205,6 @@
 		};
 /* End PBXProject section */
 
-/* Begin PBXReferenceProxy section */
-		390B052F1C158A0D0044D83D /* SQLite.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SQLite.framework;
-			remoteRef = 390B052E1C158A0D0044D83D /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		390B05311C158A0D0044D83D /* SQLite iOS Tests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "SQLite iOS Tests.xctest";
-			remoteRef = 390B05301C158A0D0044D83D /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		390B05331C158A0D0044D83D /* SQLite.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SQLite.framework;
-			remoteRef = 390B05321C158A0D0044D83D /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		390B05351C158A0D0044D83D /* SQLite Mac Tests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "SQLite Mac Tests.xctest";
-			remoteRef = 390B05341C158A0D0044D83D /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		390B05371C158A0D0044D83D /* SQLiteCipher.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SQLiteCipher.framework;
-			remoteRef = 390B05361C158A0D0044D83D /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		390B05391C158A0D0044D83D /* SQLiteCipher iOS Tests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "SQLiteCipher iOS Tests.xctest";
-			remoteRef = 390B05381C158A0D0044D83D /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		390B053B1C158A0D0044D83D /* SQLiteCipher.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SQLiteCipher.framework;
-			remoteRef = 390B053A1C158A0D0044D83D /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		390B053D1C158A0D0044D83D /* SQLiteCipher Mac Tests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "SQLiteCipher Mac Tests.xctest";
-			remoteRef = 390B053C1C158A0D0044D83D /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
-
 /* Begin PBXResourcesBuildPhase section */
 		390B04C01C14CD290044D83D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
@@ -327,7 +212,6 @@
 			files = (
 				390B04D31C14CD290044D83D /* LaunchScreen.storyboard in Resources */,
 				390B04D01C14CD290044D83D /* Assets.xcassets in Resources */,
-				390B05401C158B9F0044D83D /* ClipperFanDB in Resources */,
 				390B04CB1C14CD290044D83D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -347,6 +231,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				390B04C81C14CD290044D83D /* ViewController.swift in Sources */,
+				390B054B1C1593800044D83D /* Clipper.swift in Sources */,
+				390B05421C158D5B0044D83D /* ClipperController.swift in Sources */,
+				390B054A1C1593800044D83D /* Clipper+CoreDataProperties.swift in Sources */,
+				390B05471C158F0E0044D83D /* Util.swift in Sources */,
 				390B04C61C14CD290044D83D /* AppDelegate.swift in Sources */,
 				390B04CE1C14CD290044D83D /* ClipperFan.xcdatamodeld in Sources */,
 			);
