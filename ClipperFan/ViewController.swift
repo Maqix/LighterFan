@@ -10,17 +10,23 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        ClipperController.testaController()
+        self.navigationController?.navigationBarHidden = true
+        ClipperController.aggiungiDatiEsempio()
+    }
+    
+    override func viewWillAppear(animated: Bool)
+    {
+        self.navigationController?.navigationBarHidden = true
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func viewWillDisappear(animated: Bool)
+    {
+        self.navigationController?.navigationBarHidden = false
+        super.viewDidDisappear(animated)
     }
-
 
 }
 

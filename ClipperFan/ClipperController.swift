@@ -44,7 +44,7 @@ struct ClipperData
 ///La classe che si interfaccia con Core Data internamente, ma usa solo ClipperData per comunicare
 class ClipperController
 {
-    //MARK: Getters
+    //MARK: Lettura
     class func getIdLibero() -> Int
     {
         return (getClippers().count + 1)
@@ -92,29 +92,35 @@ class ClipperController
     //MARK: Inserimento
     class func inserisciClipper(clipperData: ClipperData)
     {
-        //Ottengo i riferimenti alle componenti di Core Data
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        let moc = appDelegate.managedObjectContext
-        let entita = NSEntityDescription.entityForName("Clipper", inManagedObjectContext: moc)
-        
-        //Ottengo il clipper da inserire
-        let clipper = Clipper(entity: entita!, insertIntoManagedObjectContext: moc)
-        
-        //Lo valorizzo
-        clipper.id = getIdLibero()
-        clipper.nome = clipperData.nome
-        clipper.descrizione = clipperData.descrizione
-        if let immagine = clipperData.immagine
+        if (clipperData.id == 0)
         {
-            if let pngRepresentation = UIImagePNGRepresentation(immagine)
+            //Ottengo i riferimenti alle componenti di Core Data
+            let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+            let moc = appDelegate.managedObjectContext
+            let entita = NSEntityDescription.entityForName("Clipper", inManagedObjectContext: moc)
+            
+            //Ottengo il clipper da inserire
+            let clipper = Clipper(entity: entita!, insertIntoManagedObjectContext: moc)
+            
+            //Lo valorizzo
+            clipper.id = getIdLibero()
+            clipper.nome = clipperData.nome
+            clipper.descrizione = clipperData.descrizione
+            if let immagine = clipperData.immagine
             {
-                let data = NSData(data: pngRepresentation)
-                clipper.immagine = data
+                if let pngRepresentation = UIImagePNGRepresentation(immagine)
+                {
+                    let data = NSData(data: pngRepresentation)
+                    clipper.immagine = data
+                }
             }
+            
+            //E lo salvo
+            appDelegate.saveAction(self)
+        }else
+        {
+            aggiornaClipper(clipperData)
         }
-        
-        //E lo salvo
-        appDelegate.saveAction(self)
     }
     
     //MARK: Rimozione
@@ -133,6 +139,39 @@ class ClipperController
                     try! moc.save()
                 }
             }
+        }
+    }
+    
+    //MARK: Aggiornamento
+    private class func aggiornaClipper(clipperData: ClipperData)
+    {
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let moc = appDelegate.managedObjectContext
+        let richiesta = NSFetchRequest(entityName: "Clipper")
+        
+        do {
+            let risultati = try moc.executeFetchRequest(richiesta) as! [Clipper]
+            for risultato in risultati
+            {
+                if (risultato.id == clipperData.id)
+                {
+                    risultato.nome = clipperData.nome
+                    risultato.descrizione = clipperData.descrizione
+                    if let immagine = clipperData.immagine
+                    {
+                        if let pngRepresentation = UIImagePNGRepresentation(immagine)
+                        {
+                            let data = NSData(data: pngRepresentation)
+                            risultato.immagine = data
+                        }
+                    }
+                    //E lo salvo
+                    appDelegate.saveAction(self)
+                }
+            }
+        }catch let error as NSError
+        {
+            print("Fetch failed: \(error.localizedDescription)")
         }
     }
 
@@ -159,11 +198,28 @@ extension ClipperController
         clippers = ClipperController.getClippers()
         print(clippers)
         
-        print("ClipperController.eliminaClipper(clipper)")
-        ClipperController.eliminaClipper(clippers.first!)
+        clipper = clippers.first!
+        print("Inserisco il clipper modificato")
+        clipper.nome = "ClipperMaqix"
+        ClipperController.inserisciClipper(clipper)
         
         print("Array di clippers: ")
         clippers = ClipperController.getClippers()
         print(clippers)
+        
+        print("ClipperController.eliminaClipper(clipper)")
+        ClipperController.eliminaClipper(clipper)
+        
+        print("Array di clippers: ")
+        clippers = ClipperController.getClippers()
+        print(clippers)
+    }
+    
+    class func aggiungiDatiEsempio()
+    {
+        var clipper = ClipperData()
+        clipper.nome = "ClipperMan"
+        clipper.descrizione = "Un clipper qualsiasi"
+        ClipperController.inserisciClipper(clipper)
     }
 }
