@@ -11,6 +11,8 @@ import UIKit
 class CollezioneTableViewController: UITableViewController {
     
     var clipperArray = ClipperController.getClippers()
+    
+    var cellaSelezionata = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +22,12 @@ class CollezioneTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    }
+    
+    override func viewWillAppear(animated: Bool)
+    {
+        clipperArray = ClipperController.getClippers()
+        tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,12 +44,15 @@ class CollezioneTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return clipperArray.count
     }
-
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("ClipperCell", forIndexPath: indexPath) as! ClipperCellTableViewCell
         cell.datiClipper = clipperArray[indexPath.row]
         return cell
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        cellaSelezionata = indexPath.row
     }
 
     /*
@@ -56,14 +67,19 @@ class CollezioneTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if (segue.identifier == "clipperCellToMostraClipper")
+        {
+            let vc = segue.destinationViewController as! MostraClipperViewController
+            vc.clipper = clipperArray[cellaSelezionata]
+        }
     }
-    */
+    
 
 }

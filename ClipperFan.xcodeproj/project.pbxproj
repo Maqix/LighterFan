@@ -20,6 +20,7 @@
 		390B054B1C1593800044D83D /* Clipper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390B05491C1593800044D83D /* Clipper.swift */; };
 		390B05501C15D2F90044D83D /* ClipperCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390B054F1C15D2F90044D83D /* ClipperCellTableViewCell.swift */; };
 		390B05531C15DF860044D83D /* CollezioneTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390B05521C15DF860044D83D /* CollezioneTableViewController.swift */; };
+		390B05551C15E45B0044D83D /* MostraClipperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390B05541C15E45B0044D83D /* MostraClipperViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		390B05491C1593800044D83D /* Clipper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Clipper.swift; sourceTree = "<group>"; };
 		390B054F1C15D2F90044D83D /* ClipperCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClipperCellTableViewCell.swift; sourceTree = "<group>"; };
 		390B05521C15DF860044D83D /* CollezioneTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollezioneTableViewController.swift; sourceTree = "<group>"; };
+		390B05541C15E45B0044D83D /* MostraClipperViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MostraClipperViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,10 +98,10 @@
 				390B054C1C15C10B0044D83D /* Model */,
 				390B05431C158D620044D83D /* ViewControllers */,
 				390B05451C158D740044D83D /* Controllers */,
-				390B04C91C14CD290044D83D /* Main.storyboard */,
 				390B05511C15D3090044D83D /* Celle */,
 				390B04CF1C14CD290044D83D /* Assets.xcassets */,
 				390B04D11C14CD290044D83D /* LaunchScreen.storyboard */,
+				390B04C91C14CD290044D83D /* Main.storyboard */,
 				390B04D41C14CD290044D83D /* Info.plist */,
 				390B04CC1C14CD290044D83D /* ClipperFan.xcdatamodeld */,
 			);
@@ -120,6 +122,7 @@
 			children = (
 				390B04C71C14CD290044D83D /* ViewController.swift */,
 				390B05521C15DF860044D83D /* CollezioneTableViewController.swift */,
+				390B05541C15E45B0044D83D /* MostraClipperViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 				390B05531C15DF860044D83D /* CollezioneTableViewController.swift in Sources */,
 				390B054A1C1593800044D83D /* Clipper+CoreDataProperties.swift in Sources */,
 				390B05501C15D2F90044D83D /* ClipperCellTableViewCell.swift in Sources */,
+				390B05551C15E45B0044D83D /* MostraClipperViewController.swift in Sources */,
 				390B05471C158F0E0044D83D /* Util.swift in Sources */,
 				390B04C61C14CD290044D83D /* AppDelegate.swift in Sources */,
 				390B04CE1C14CD290044D83D /* ClipperFan.xcdatamodeld in Sources */,

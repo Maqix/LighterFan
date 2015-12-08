@@ -37,7 +37,7 @@ struct ClipperData
         id = 0
         nome = "Nessun nome"
         descrizione = "Nessuna descrizione"
-        immagine = nil
+        immagine = UIImage(named: "clipperSample")
     }
 }
 

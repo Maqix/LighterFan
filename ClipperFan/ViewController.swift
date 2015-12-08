@@ -14,7 +14,6 @@ class ViewController: UIViewController {
     {
         super.viewDidLoad()
         self.navigationController?.navigationBarHidden = true
-        ClipperController.aggiungiDatiEsempio()
     }
     
     override func viewWillAppear(animated: Bool)
