@@ -53,6 +53,39 @@ class CollezioneTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         cellaSelezionata = indexPath.row
+        performSegueWithIdentifier("clipperCellToMostraClipper", sender: self)
+    }
+    
+    /*
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if (editingStyle == UITableViewCellEditingStyle.Delete) {
+            // handle delete (by removing the data from your array and updating the tableview)
+            ClipperController.eliminaClipper(clipperArray[indexPath.row])
+            clipperArray.removeAtIndex(indexPath.row)
+            tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .Left)
+        }
+    }
+    */
+    
+    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+    
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath)
+    {
+        
+    }
+    
+    override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]?
+    {
+            let delete = UITableViewRowAction(style: .Default, title: "Elimina") { action, index in
+                print("Delete")
+                tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+                ClipperController.eliminaClipper(self.clipperArray[indexPath.row])
+                self.clipperArray.removeAtIndex(indexPath.row)
+                tableView.reloadData()
+            }
+            return [delete]
     }
 
     /*

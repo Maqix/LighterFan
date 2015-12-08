@@ -25,6 +25,9 @@ class ClipperCellTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        let backgroundView = UIView(frame: self.frame)
+        backgroundView.backgroundColor = UIColor.yellowColor()
+        self.selectedBackgroundView = backgroundView
         // Initialization code
     }
 
