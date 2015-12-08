@@ -21,6 +21,12 @@
 		390B05501C15D2F90044D83D /* ClipperCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390B054F1C15D2F90044D83D /* ClipperCellTableViewCell.swift */; };
 		390B05531C15DF860044D83D /* CollezioneTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390B05521C15DF860044D83D /* CollezioneTableViewController.swift */; };
 		390B05551C15E45B0044D83D /* MostraClipperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390B05541C15E45B0044D83D /* MostraClipperViewController.swift */; };
+		399925A51C170A980008A1A1 /* HFImageEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 399925A21C170A980008A1A1 /* HFImageEditorViewController.m */; };
+		399925A61C170A980008A1A1 /* HFImageEditorFrameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 399925A41C170A980008A1A1 /* HFImageEditorFrameView.m */; };
+		399925A81C170C290008A1A1 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 399925A71C170C290008A1A1 /* AssetsLibrary.framework */; };
+		399925AE1C170CA30008A1A1 /* DemoImageEditor.xib in Resources */ = {isa = PBXBuildFile; fileRef = 399925A91C170CA30008A1A1 /* DemoImageEditor.xib */; };
+		399925AF1C170CA30008A1A1 /* DemoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 399925AB1C170CA30008A1A1 /* DemoAppDelegate.m */; };
+		399925B01C170CA30008A1A1 /* DemoImageEditor.m in Sources */ = {isa = PBXBuildFile; fileRef = 399925AD1C170CA30008A1A1 /* DemoImageEditor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +58,18 @@
 		390B054F1C15D2F90044D83D /* ClipperCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClipperCellTableViewCell.swift; sourceTree = "<group>"; };
 		390B05521C15DF860044D83D /* CollezioneTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollezioneTableViewController.swift; sourceTree = "<group>"; };
 		390B05541C15E45B0044D83D /* MostraClipperViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MostraClipperViewController.swift; sourceTree = "<group>"; };
+		3999259F1C170A970008A1A1 /* ClipperFan-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ClipperFan-Bridging-Header.h"; sourceTree = "<group>"; };
+		399925A01C170A980008A1A1 /* HFImageEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFImageEditorViewController.h; sourceTree = "<group>"; };
+		399925A11C170A980008A1A1 /* HFImageEditorViewController+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HFImageEditorViewController+Private.h"; sourceTree = "<group>"; };
+		399925A21C170A980008A1A1 /* HFImageEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFImageEditorViewController.m; sourceTree = "<group>"; };
+		399925A31C170A980008A1A1 /* HFImageEditorFrameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFImageEditorFrameView.h; sourceTree = "<group>"; };
+		399925A41C170A980008A1A1 /* HFImageEditorFrameView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFImageEditorFrameView.m; sourceTree = "<group>"; };
+		399925A71C170C290008A1A1 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		399925A91C170CA30008A1A1 /* DemoImageEditor.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DemoImageEditor.xib; sourceTree = "<group>"; };
+		399925AA1C170CA30008A1A1 /* DemoAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoAppDelegate.h; sourceTree = "<group>"; };
+		399925AB1C170CA30008A1A1 /* DemoAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoAppDelegate.m; sourceTree = "<group>"; };
+		399925AC1C170CA30008A1A1 /* DemoImageEditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoImageEditor.h; sourceTree = "<group>"; };
+		399925AD1C170CA30008A1A1 /* DemoImageEditor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoImageEditor.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				399925A81C170C290008A1A1 /* AssetsLibrary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +94,7 @@
 		390B04B91C14CD290044D83D = {
 			isa = PBXGroup;
 			children = (
+				399925A71C170C290008A1A1 /* AssetsLibrary.framework */,
 				390B04C41C14CD290044D83D /* ClipperFan */,
 				390B04DC1C14CD290044D83D /* ClipperFanTests */,
 				390B04C31C14CD290044D83D /* Products */,
@@ -93,6 +113,7 @@
 		390B04C41C14CD290044D83D /* ClipperFan */ = {
 			isa = PBXGroup;
 			children = (
+				3999259E1C170A810008A1A1 /* ImageEditor */,
 				390B04C51C14CD290044D83D /* AppDelegate.swift */,
 				390B05461C158F0E0044D83D /* Util.swift */,
 				390B054C1C15C10B0044D83D /* Model */,
@@ -151,6 +172,24 @@
 				390B054F1C15D2F90044D83D /* ClipperCellTableViewCell.swift */,
 			);
 			name = Celle;
+			sourceTree = "<group>";
+		};
+		3999259E1C170A810008A1A1 /* ImageEditor */ = {
+			isa = PBXGroup;
+			children = (
+				399925A91C170CA30008A1A1 /* DemoImageEditor.xib */,
+				399925AA1C170CA30008A1A1 /* DemoAppDelegate.h */,
+				399925AB1C170CA30008A1A1 /* DemoAppDelegate.m */,
+				399925AC1C170CA30008A1A1 /* DemoImageEditor.h */,
+				399925AD1C170CA30008A1A1 /* DemoImageEditor.m */,
+				399925A01C170A980008A1A1 /* HFImageEditorViewController.h */,
+				399925A11C170A980008A1A1 /* HFImageEditorViewController+Private.h */,
+				399925A21C170A980008A1A1 /* HFImageEditorViewController.m */,
+				399925A31C170A980008A1A1 /* HFImageEditorFrameView.h */,
+				399925A41C170A980008A1A1 /* HFImageEditorFrameView.m */,
+				3999259F1C170A970008A1A1 /* ClipperFan-Bridging-Header.h */,
+			);
+			name = ImageEditor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,6 +278,7 @@
 				390B04D31C14CD290044D83D /* LaunchScreen.storyboard in Resources */,
 				390B04D01C14CD290044D83D /* Assets.xcassets in Resources */,
 				390B04CB1C14CD290044D83D /* Main.storyboard in Resources */,
+				399925AE1C170CA30008A1A1 /* DemoImageEditor.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,12 +297,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				390B04C81C14CD290044D83D /* ViewController.swift in Sources */,
+				399925A61C170A980008A1A1 /* HFImageEditorFrameView.m in Sources */,
 				390B054B1C1593800044D83D /* Clipper.swift in Sources */,
+				399925A51C170A980008A1A1 /* HFImageEditorViewController.m in Sources */,
 				390B05421C158D5B0044D83D /* ClipperController.swift in Sources */,
 				390B05531C15DF860044D83D /* CollezioneTableViewController.swift in Sources */,
 				390B054A1C1593800044D83D /* Clipper+CoreDataProperties.swift in Sources */,
 				390B05501C15D2F90044D83D /* ClipperCellTableViewCell.swift in Sources */,
 				390B05551C15E45B0044D83D /* MostraClipperViewController.swift in Sources */,
+				399925B01C170CA30008A1A1 /* DemoImageEditor.m in Sources */,
+				399925AF1C170CA30008A1A1 /* DemoAppDelegate.m in Sources */,
 				390B05471C158F0E0044D83D /* Util.swift in Sources */,
 				390B04C61C14CD290044D83D /* AppDelegate.swift in Sources */,
 				390B04CE1C14CD290044D83D /* ClipperFan.xcdatamodeld in Sources */,
@@ -394,11 +438,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = ClipperFan/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Maqix.ClipperFan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ClipperFan/ClipperFan-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -406,11 +453,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = ClipperFan/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Maqix.ClipperFan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ClipperFan/ClipperFan-Bridging-Header.h";
 			};
 			name = Release;
 		};
