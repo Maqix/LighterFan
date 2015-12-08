@@ -322,7 +322,6 @@
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2zQ-TA-Be0">
                                 <rect key="frame" x="20" y="200" width="560" height="310"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="273" id="JR9-IU-le6"/>
                                 </constraints>

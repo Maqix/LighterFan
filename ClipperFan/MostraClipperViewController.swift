@@ -19,6 +19,9 @@ class MostraClipperViewController: UIViewController {
     
     let imagePicker = UIImagePickerController()
     
+    var imageEditor = DemoImageEditor()
+    var library =  ALAssetsLibrary()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let tapGestureRecognizer = UITapGestureRecognizer(target:self, action:Selector("imageTapped:"))
@@ -55,9 +58,40 @@ class MostraClipperViewController: UIViewController {
         
         let photoLibraryOption = UIAlertAction(title: "Galleria", style: UIAlertActionStyle.Default, handler: { (alert: UIAlertAction!) -> Void in
             print("from library")
-            self.imagePicker.allowsEditing = true
+            self.imagePicker.allowsEditing = false
             self.imagePicker.sourceType = .PhotoLibrary
             self.imagePicker.modalPresentationStyle = .Popover
+            
+            
+            //IMAGE EDITING STUFF
+            let libreria = ALAssetsLibrary()
+            self.imageEditor = DemoImageEditor.init(nibName: "DemoImageEditor", bundle: nil)
+            self.imageEditor.checkBounds = true
+            self.imageEditor.rotateEnabled = true
+            self.library = libreria
+            let completionBlock = {(assetUrl: NSURL!, error: NSError!) in
+                
+                if (error != nil)
+                {
+                    Util.invokeAlertMethod("Errore Salvataggio", strBody: "Ci sono stati problemi con il salvataggio della foto", delegate: self)
+                }
+            
+            }
+            let doneCallBack = { (editedImage: UIImage!,canceled: Bool) in
+            
+                print("doneCalBack closure")
+                if (!canceled)
+                {
+                    let imageOrientation = ALAssetOrientation(rawValue: editedImage.imageOrientation.rawValue)
+                    self.immagineIV.image = editedImage
+                    self.library.writeImageToSavedPhotosAlbum(editedImage.CGImage, orientation: imageOrientation!, completionBlock: completionBlock)
+                }
+                self.dismissViewControllerAnimated(true, completion: nil)
+            
+            }
+            self.imageEditor.doneCallback = doneCallBack
+            //IMAGE EDITING STUFF
+            
             self.presentViewController(self.imagePicker, animated: true, completion: nil)
         })
         let cameraOption = UIAlertAction(title: "Scatta una foto", style: UIAlertActionStyle.Default, handler: { (alert: UIAlertAction!) -> Void in
@@ -66,13 +100,43 @@ class MostraClipperViewController: UIViewController {
             self.imagePicker.allowsEditing = true
             self.imagePicker.sourceType = .Camera
             self.imagePicker.modalPresentationStyle = .Popover
+            
+            //IMAGE EDITING STUFF
+            let libreria = ALAssetsLibrary()
+            self.imageEditor = DemoImageEditor.init(nibName: "DemoImageEditor", bundle: nil)
+            self.imageEditor.checkBounds = true
+            self.imageEditor.rotateEnabled = true
+            self.library = libreria
+            let completionBlock = {(assetUrl: NSURL!, error: NSError!) in
+                
+                if (error != nil)
+                {
+                    Util.invokeAlertMethod("Errore Salvataggio", strBody: "Ci sono stati problemi con il salvataggio della foto", delegate: self)
+                }
+                
+            }
+            let doneCallBack = { (editedImage: UIImage!,canceled: Bool) in
+                
+                print("doneCalBack closure")
+                if (!canceled)
+                {
+                    let imageOrientation = ALAssetOrientation(rawValue: editedImage.imageOrientation.rawValue)
+                    self.immagineIV.image = editedImage
+                    self.library.writeImageToSavedPhotosAlbum(editedImage.CGImage, orientation: imageOrientation!, completionBlock: completionBlock)
+                }
+                self.dismissViewControllerAnimated(true, completion: nil)
+                
+            }
+            self.imageEditor.doneCallback = doneCallBack
+            //IMAGE EDITING STUFF
+            
             self.presentViewController(self.imagePicker, animated: true, completion: nil)
             
         })
-        let cancelOption = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: {
+        let cancelOption = UIAlertAction(title: "Annulla", style: UIAlertActionStyle.Cancel, handler: {
             (alert: UIAlertAction!) -> Void in
             print("Cancel")
-            self.dismissViewControllerAnimated(true, completion: nil)
+            //self.dismissViewControllerAnimated(true, completion: nil)
         })
         
         //Adding the actions to the action sheet. Here, camera will only show up as an option if the camera is available in the first place.
@@ -128,9 +192,58 @@ extension MostraClipperViewController: UIImagePickerControllerDelegate, UINaviga
         //handle media here i.e. do stuff with photo
         
         print("imagePickerController called")
-        
+        /*
         let chosenImage = info[UIImagePickerControllerEditedImage] as! UIImage
         immagineIV.image = chosenImage
+        */
+        
+        //IMAGE EDITING STUFF
+        
+        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        if (picker.sourceType == .Camera)
+        {
+            let completionBlock = {(assetUrl: NSURL!, error: NSError!) in
+                
+                if (error != nil)
+                {
+                    Util.invokeAlertMethod("Errore Salvataggio", strBody: "Ci sono stati problemi con il salvataggio della foto", delegate: self)
+                }else
+                {
+                    let assetURL = assetUrl
+                    
+                    self.library.assetForURL(assetURL, resultBlock: { (asset: ALAsset!) in
+                        let preview = UIImage(CGImage: asset.aspectRatioThumbnail().takeUnretainedValue())
+                        self.imageEditor.sourceImage = image
+                        self.imageEditor.previewImage = preview
+                        self.imageEditor.reset(false)
+                        self.presentViewController(self.imageEditor, animated: true, completion: nil)
+                        
+                        }, failureBlock: { (error: NSError!) in
+                            print("Non sono riuscito ad ottenere l'asset dalla libreria")
+                    })
+
+                }
+                
+            }
+            self.library.writeImageToSavedPhotosAlbum(image.CGImage, orientation: ALAssetOrientation(rawValue: image.imageOrientation.rawValue)!, completionBlock: completionBlock)
+        }else
+        {
+            let assetURL = info[UIImagePickerControllerReferenceURL] as! NSURL
+            
+            self.library.assetForURL(assetURL, resultBlock: { (asset: ALAsset!) in
+                let preview = UIImage(CGImage: asset.aspectRatioThumbnail().takeUnretainedValue())
+                self.imageEditor.sourceImage = image
+                self.imageEditor.previewImage = preview
+                self.imageEditor.reset(false)
+                self.presentViewController(self.imageEditor, animated: true, completion: nil)
+                
+                }, failureBlock: { (error: NSError!) in
+                    print("Non sono riuscito ad ottenere l'asset dalla libreria")
+            })
+
+        }
+        //IMAGE EDITING STUFF
+        
         dismissViewControllerAnimated(true, completion: nil)
     }
     
