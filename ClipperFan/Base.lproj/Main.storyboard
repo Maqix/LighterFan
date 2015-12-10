@@ -6,6 +6,70 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Cerca Clipper-->
+        <scene sceneID="Nsx-Iz-4so">
+            <objects>
+                <viewController id="x9N-Qu-5u6" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ice-pf-Ijo"/>
+                        <viewControllerLayoutGuide type="bottom" id="jqh-0T-9wF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bDw-sT-DsI">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clipperSearch" translatesAutoresizingMaskIntoConstraints="NO" id="Dcp-7z-eVf">
+                                <rect key="frame" x="0.0" y="64" width="114" height="165"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="165" id="L9L-p3-p1v"/>
+                                    <constraint firstAttribute="width" constant="114" id="Ls5-kJ-9rT"/>
+                                    <constraint firstAttribute="width" constant="114" id="Re3-Vx-UFF"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Re3-Vx-UFF"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <exclude reference="L9L-p3-p1v"/>
+                                        <exclude reference="Ls5-kJ-9rT"/>
+                                        <include reference="Re3-Vx-UFF"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98431372549999996" green="0.78039215689999997" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Dcp-7z-eVf" firstAttribute="leading" secondItem="bDw-sT-DsI" secondAttribute="leadingMargin" constant="-20" id="9nh-wm-DKF"/>
+                            <constraint firstItem="Dcp-7z-eVf" firstAttribute="top" secondItem="ice-pf-Ijo" secondAttribute="bottom" id="Kv3-pB-Wwc"/>
+                            <constraint firstItem="Dcp-7z-eVf" firstAttribute="top" secondItem="ice-pf-Ijo" secondAttribute="bottom" id="pim-9x-rRD"/>
+                            <constraint firstItem="jqh-0T-9wF" firstAttribute="top" secondItem="Dcp-7z-eVf" secondAttribute="bottom" id="sDe-nZ-R4r"/>
+                            <constraint firstItem="Dcp-7z-eVf" firstAttribute="leading" secondItem="bDw-sT-DsI" secondAttribute="leadingMargin" constant="-20" id="xfq-Np-hdD"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Kv3-pB-Wwc"/>
+                                <exclude reference="xfq-Np-hdD"/>
+                                <exclude reference="sDe-nZ-R4r"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="9nh-wm-DKF"/>
+                                <include reference="Kv3-pB-Wwc"/>
+                                <exclude reference="pim-9x-rRD"/>
+                                <include reference="xfq-Np-hdD"/>
+                                <include reference="sDe-nZ-R4r"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="Cerca Clipper" id="vme-wk-fcf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ctV-R3-pN8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2053" y="-490"/>
+        </scene>
         <!--Menu-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -121,6 +185,9 @@
                                         <exclude reference="zYW-C1-bvR"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <segue destination="x9N-Qu-5u6" kind="show" id="X78-tZ-z9c"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.98624199628829956" green="0.7796865701675415" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -789,6 +856,7 @@
     <resources>
         <image name="clipperFan" width="429" height="184"/>
         <image name="clipperMan" width="448" height="651"/>
+        <image name="clipperSearch" width="341" height="527"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="7tx-01-5jE"/>
