@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ScaffaleViewController: UIViewController {
+class ScaffaleViewController: UIViewController, LanciatoreMostraClipper {
     
     var clipperArray = ClipperController.getClippers()
     
@@ -28,8 +28,7 @@ class ScaffaleViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool)
     {
-        clipperArray = ClipperController.getClippers()
-        collectionView.reloadData()
+        reloadTable()
     }
 
     /*
@@ -41,6 +40,23 @@ class ScaffaleViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+        if (segue.identifier == "clipperCollectionToMostraClipper")
+        {
+            let vc = segue.destinationViewController as! MostraClipperViewController
+            vc.delegate = self
+            vc.clipper = clipperArray[cellaSelezionata]
+        }
+    }
+    
+    func reloadTable()
+    {
+        clipperArray = ClipperController.getClippers()
+        collectionView.reloadData()
+    }
 
 }
 
@@ -62,5 +78,11 @@ extension ScaffaleViewController: UICollectionViewDataSource, UICollectionViewDe
             cell.datiClipper = clipperArray[indexPath.row]
             
             return cell
+    }
+    
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath)
+    {
+        cellaSelezionata = indexPath.row
+        performSegueWithIdentifier("clipperCollectionToMostraClipper", sender: self)
     }
 }

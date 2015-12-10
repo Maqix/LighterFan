@@ -174,16 +174,14 @@
 			isa = PBXGroup;
 			children = (
 				3999259F1C170A970008A1A1 /* ClipperFan-Bridging-Header.h */,
-				391E7A5E1C1874570067F1B3 /* Chameleon */,
-				3999259E1C170A810008A1A1 /* HFImageEditorViewController */,
-				392EE5881C19C42F00815A71 /* ImageEditor */,
-				390B04C51C14CD290044D83D /* AppDelegate.swift */,
+				392EE58A1C19C77D00815A71 /* Librerie */,
 				392EE5891C19C4D900815A71 /* Utility */,
 				390B054C1C15C10B0044D83D /* Model */,
 				390B05431C158D620044D83D /* ViewControllers */,
 				390B05451C158D740044D83D /* Controllers */,
 				390B05511C15D3090044D83D /* Views */,
 				390B04CF1C14CD290044D83D /* Assets.xcassets */,
+				390B04C51C14CD290044D83D /* AppDelegate.swift */,
 				390B04D11C14CD290044D83D /* LaunchScreen.storyboard */,
 				390B04C91C14CD290044D83D /* Main.storyboard */,
 				390B04D41C14CD290044D83D /* Info.plist */,
@@ -290,12 +288,22 @@
 		392EE5891C19C4D900815A71 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				391E7A2F1C186B550067F1B3 /* UINavigationController+Extension.swift */,
+				392EE5881C19C42F00815A71 /* ImageEditor */,
 				390B05461C158F0E0044D83D /* Util.swift */,
+				391E7A2F1C186B550067F1B3 /* UINavigationController+Extension.swift */,
 				39034B4A1C18B7500089E2C6 /* UIImage+Extension.swift */,
 				39F54C781C199ABD00156850 /* UIImageEffects.swift */,
 			);
 			name = Utility;
+			sourceTree = "<group>";
+		};
+		392EE58A1C19C77D00815A71 /* Librerie */ = {
+			isa = PBXGroup;
+			children = (
+				391E7A5E1C1874570067F1B3 /* Chameleon */,
+				3999259E1C170A810008A1A1 /* HFImageEditorViewController */,
+			);
+			name = Librerie;
 			sourceTree = "<group>";
 		};
 		3999259E1C170A810008A1A1 /* HFImageEditorViewController */ = {

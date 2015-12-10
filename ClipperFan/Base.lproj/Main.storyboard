@@ -193,7 +193,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="580" height="199"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Tpi-nI-HQE">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Tpi-nI-HQE">
                                                     <rect key="frame" x="0.0" y="4" width="580" height="191"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F9b-MC-Oy8" customClass="PaddedLabel" customModule="ClipperFan" customModuleProvider="target">
@@ -369,6 +369,7 @@
                     <navigationItem key="navigationItem" title="Scaffale Virtuale" id="eDk-yj-bJE"/>
                     <connections>
                         <outlet property="collectionView" destination="LWE-ba-U1h" id="gO4-NO-oGU"/>
+                        <segue destination="IFD-Nq-7D2" kind="presentation" identifier="clipperCollectionToMostraClipper" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="7tx-01-5jE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nXR-mj-ja2" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -387,7 +388,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="19j-Pa-vot">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="19j-Pa-vot">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wDy-Xc-2wf">
@@ -754,6 +755,6 @@
         <image name="clipperMan" width="448" height="651"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="2jm-zL-yFW"/>
+        <segue reference="sTw-z5-oHU"/>
     </inferredMetricsTieBreakers>
 </document>
