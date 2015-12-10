@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1504" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none">
     <dependencies>
-        <deployment defaultVersion="1296" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3746"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DemoImageEditor">
@@ -32,17 +32,17 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem width="31" style="plain" systemItem="fixedSpace" id="60"/>
-                        <barButtonItem title="S" width="25" id="52">
+                        <barButtonItem title="1:3" width="25" id="52">
                             <connections>
                                 <action selector="setSquareAction:" destination="-1" id="64"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem title="L" width="25" id="53">
+                        <barButtonItem title="1:2" width="25" id="53">
                             <connections>
                                 <action selector="setLandscapeAction:" destination="-1" id="65"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem title="P" width="25" id="54">
+                        <barButtonItem title="2:3" width="25" id="54">
                             <connections>
                                 <action selector="setLPortraitAction:" destination="-1" id="66"/>
                             </connections>
@@ -60,7 +60,7 @@
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
             <gestureRecognizers/>
-            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
         </view>
     </objects>
 </document>

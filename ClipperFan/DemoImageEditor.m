@@ -13,11 +13,21 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if(self) {
-        self.cropRect = CGRectMake(0,0,320,320);
+        self.cropRect = CGRectMake(0,0,80,320);
         self.minimumScale = 0.2;
         self.maximumScale = 10;
     }
     return self;
+}
+
+- (BOOL) shouldAutorotate
+{
+    return NO;
+}
+
+- (UIInterfaceOrientationMask) supportedInterfaceOrientations
+{
+    return UIInterfaceOrientationMaskPortrait;
 }
 
 
@@ -31,13 +41,13 @@
 
 - (IBAction)setSquareAction:(id)sender
 {
-    self.cropRect = CGRectMake((self.frameView.frame.size.width-320)/2.0f, (self.frameView.frame.size.height-320)/2.0f, 320, 320);
+    self.cropRect = CGRectMake((self.frameView.frame.size.width-240)/2.0f, (self.frameView.frame.size.height-320)/2.0f, 80, 300);
     [self reset:YES];
 }
 
 - (IBAction)setLandscapeAction:(id)sender
 {
-    self.cropRect = CGRectMake((self.frameView.frame.size.width-320)/2.0f, (self.frameView.frame.size.height-240)/2.0f, 320, 240);
+    self.cropRect = CGRectMake((self.frameView.frame.size.width-240)/2.0f, (self.frameView.frame.size.height-320)/2.0f, 60, 320);
     [self reset:YES];
 }
 

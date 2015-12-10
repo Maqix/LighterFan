@@ -29,7 +29,14 @@ class ClipperFanTests: XCTestCase {
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measureBlock {
-            // Put the code you want to measure the time of here.
+            //_ = ClipperController.getClippers()
+
+            
+            //_ = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("MostraClipperViewController") as! MostraClipperViewController
+            
+            let imagePicker = UIImagePickerController()
+            let imageEditor = DemoImageEditor()
+            let library =  ALAssetsLibrary()
         }
     }
     

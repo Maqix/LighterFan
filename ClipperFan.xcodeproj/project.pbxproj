@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		39034B4B1C18B7500089E2C6 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39034B4A1C18B7500089E2C6 /* UIImage+Extension.swift */; };
+		39034B4D1C18C71B0089E2C6 /* ClipperCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39034B4C1C18C71B0089E2C6 /* ClipperCollectionViewCell.swift */; };
+		39034B4F1C18C8050089E2C6 /* ScaffaleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39034B4E1C18C8050089E2C6 /* ScaffaleViewController.swift */; };
 		390B04C61C14CD290044D83D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390B04C51C14CD290044D83D /* AppDelegate.swift */; };
 		390B04C81C14CD290044D83D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390B04C71C14CD290044D83D /* ViewController.swift */; };
 		390B04CB1C14CD290044D83D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 390B04C91C14CD290044D83D /* Main.storyboard */; };
@@ -19,14 +22,32 @@
 		390B054A1C1593800044D83D /* Clipper+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390B05481C1593800044D83D /* Clipper+CoreDataProperties.swift */; };
 		390B054B1C1593800044D83D /* Clipper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390B05491C1593800044D83D /* Clipper.swift */; };
 		390B05501C15D2F90044D83D /* ClipperCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390B054F1C15D2F90044D83D /* ClipperCellTableViewCell.swift */; };
-		390B05531C15DF860044D83D /* CollezioneTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390B05521C15DF860044D83D /* CollezioneTableViewController.swift */; };
 		390B05551C15E45B0044D83D /* MostraClipperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390B05541C15E45B0044D83D /* MostraClipperViewController.swift */; };
+		391E7A301C186B550067F1B3 /* UINavigationController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391E7A2F1C186B550067F1B3 /* UINavigationController+Extension.swift */; };
+		391E7A321C18716B0067F1B3 /* MQXButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391E7A311C18716B0067F1B3 /* MQXButton.swift */; };
+		391E7A501C18744E0067F1B3 /* ChameleonShorthand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391E7A331C18744E0067F1B3 /* ChameleonShorthand.swift */; };
+		391E7A511C18744E0067F1B3 /* Chameleon_.m in Sources */ = {isa = PBXBuildFile; fileRef = 391E7A361C18744E0067F1B3 /* Chameleon_.m */; };
+		391E7A521C18744E0067F1B3 /* ChameleonConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 391E7A381C18744E0067F1B3 /* ChameleonConstants.m */; };
+		391E7A531C18744E0067F1B3 /* NSArray+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = 391E7A3C1C18744E0067F1B3 /* NSArray+Chameleon.m */; };
+		391E7A541C18744E0067F1B3 /* UIButton+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = 391E7A3E1C18744E0067F1B3 /* UIButton+Chameleon.m */; };
+		391E7A551C18744E0067F1B3 /* UIColor+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = 391E7A401C18744E0067F1B3 /* UIColor+Chameleon.m */; };
+		391E7A561C18744E0067F1B3 /* UIColor+ChameleonPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 391E7A421C18744E0067F1B3 /* UIColor+ChameleonPrivate.m */; };
+		391E7A571C18744E0067F1B3 /* UIImage+ChameleonPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 391E7A441C18744E0067F1B3 /* UIImage+ChameleonPrivate.m */; };
+		391E7A581C18744E0067F1B3 /* UILabel+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = 391E7A461C18744E0067F1B3 /* UILabel+Chameleon.m */; };
+		391E7A591C18744E0067F1B3 /* UINavigationController+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = 391E7A481C18744E0067F1B3 /* UINavigationController+Chameleon.m */; };
+		391E7A5A1C18744E0067F1B3 /* UIView+ChameleonPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 391E7A4A1C18744E0067F1B3 /* UIView+ChameleonPrivate.m */; };
+		391E7A5B1C18744E0067F1B3 /* UIViewController+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = 391E7A4C1C18744E0067F1B3 /* UIViewController+Chameleon.m */; };
+		391E7A5C1C18744E0067F1B3 /* UIAppearance+Swift.m in Sources */ = {isa = PBXBuildFile; fileRef = 391E7A4E1C18744E0067F1B3 /* UIAppearance+Swift.m */; };
+		391E7A5D1C18744E0067F1B3 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 391E7A4F1C18744E0067F1B3 /* Info.plist */; };
+		391E7A601C1874780067F1B3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 391E7A5F1C1874780067F1B3 /* QuartzCore.framework */; };
+		391E7A621C18747F0067F1B3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 391E7A611C18747F0067F1B3 /* CoreGraphics.framework */; };
 		399925A51C170A980008A1A1 /* HFImageEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 399925A21C170A980008A1A1 /* HFImageEditorViewController.m */; };
 		399925A61C170A980008A1A1 /* HFImageEditorFrameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 399925A41C170A980008A1A1 /* HFImageEditorFrameView.m */; };
 		399925A81C170C290008A1A1 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 399925A71C170C290008A1A1 /* AssetsLibrary.framework */; };
 		399925AE1C170CA30008A1A1 /* DemoImageEditor.xib in Resources */ = {isa = PBXBuildFile; fileRef = 399925A91C170CA30008A1A1 /* DemoImageEditor.xib */; };
 		399925AF1C170CA30008A1A1 /* DemoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 399925AB1C170CA30008A1A1 /* DemoAppDelegate.m */; };
 		399925B01C170CA30008A1A1 /* DemoImageEditor.m in Sources */ = {isa = PBXBuildFile; fileRef = 399925AD1C170CA30008A1A1 /* DemoImageEditor.m */; };
+		399925B21C175F4F0008A1A1 /* TabellaClipperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399925B11C175F4F0008A1A1 /* TabellaClipperViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +61,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		39034B4A1C18B7500089E2C6 /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		39034B4C1C18C71B0089E2C6 /* ClipperCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClipperCollectionViewCell.swift; sourceTree = "<group>"; };
+		39034B4E1C18C8050089E2C6 /* ScaffaleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScaffaleViewController.swift; sourceTree = "<group>"; };
 		390B04C21C14CD290044D83D /* ClipperFan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClipperFan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		390B04C51C14CD290044D83D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		390B04C71C14CD290044D83D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,8 +80,40 @@
 		390B05481C1593800044D83D /* Clipper+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Clipper+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		390B05491C1593800044D83D /* Clipper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Clipper.swift; sourceTree = "<group>"; };
 		390B054F1C15D2F90044D83D /* ClipperCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClipperCellTableViewCell.swift; sourceTree = "<group>"; };
-		390B05521C15DF860044D83D /* CollezioneTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollezioneTableViewController.swift; sourceTree = "<group>"; };
 		390B05541C15E45B0044D83D /* MostraClipperViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MostraClipperViewController.swift; sourceTree = "<group>"; };
+		391E7A2F1C186B550067F1B3 /* UINavigationController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extension.swift"; sourceTree = "<group>"; };
+		391E7A311C18716B0067F1B3 /* MQXButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQXButton.swift; sourceTree = "<group>"; };
+		391E7A331C18744E0067F1B3 /* ChameleonShorthand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChameleonShorthand.swift; sourceTree = "<group>"; };
+		391E7A341C18744E0067F1B3 /* Chameleon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chameleon.h; sourceTree = "<group>"; };
+		391E7A351C18744E0067F1B3 /* Chameleon_.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chameleon_.h; sourceTree = "<group>"; };
+		391E7A361C18744E0067F1B3 /* Chameleon_.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Chameleon_.m; sourceTree = "<group>"; };
+		391E7A371C18744E0067F1B3 /* ChameleonConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChameleonConstants.h; sourceTree = "<group>"; };
+		391E7A381C18744E0067F1B3 /* ChameleonConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChameleonConstants.m; sourceTree = "<group>"; };
+		391E7A391C18744E0067F1B3 /* ChameleonEnums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChameleonEnums.h; sourceTree = "<group>"; };
+		391E7A3A1C18744E0067F1B3 /* ChameleonMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChameleonMacros.h; sourceTree = "<group>"; };
+		391E7A3B1C18744E0067F1B3 /* NSArray+Chameleon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Chameleon.h"; sourceTree = "<group>"; };
+		391E7A3C1C18744E0067F1B3 /* NSArray+Chameleon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Chameleon.m"; sourceTree = "<group>"; };
+		391E7A3D1C18744E0067F1B3 /* UIButton+Chameleon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Chameleon.h"; sourceTree = "<group>"; };
+		391E7A3E1C18744E0067F1B3 /* UIButton+Chameleon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Chameleon.m"; sourceTree = "<group>"; };
+		391E7A3F1C18744E0067F1B3 /* UIColor+Chameleon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Chameleon.h"; sourceTree = "<group>"; };
+		391E7A401C18744E0067F1B3 /* UIColor+Chameleon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Chameleon.m"; sourceTree = "<group>"; };
+		391E7A411C18744E0067F1B3 /* UIColor+ChameleonPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ChameleonPrivate.h"; sourceTree = "<group>"; };
+		391E7A421C18744E0067F1B3 /* UIColor+ChameleonPrivate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ChameleonPrivate.m"; sourceTree = "<group>"; };
+		391E7A431C18744E0067F1B3 /* UIImage+ChameleonPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ChameleonPrivate.h"; sourceTree = "<group>"; };
+		391E7A441C18744E0067F1B3 /* UIImage+ChameleonPrivate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ChameleonPrivate.m"; sourceTree = "<group>"; };
+		391E7A451C18744E0067F1B3 /* UILabel+Chameleon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Chameleon.h"; sourceTree = "<group>"; };
+		391E7A461C18744E0067F1B3 /* UILabel+Chameleon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Chameleon.m"; sourceTree = "<group>"; };
+		391E7A471C18744E0067F1B3 /* UINavigationController+Chameleon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+Chameleon.h"; sourceTree = "<group>"; };
+		391E7A481C18744E0067F1B3 /* UINavigationController+Chameleon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+Chameleon.m"; sourceTree = "<group>"; };
+		391E7A491C18744E0067F1B3 /* UIView+ChameleonPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ChameleonPrivate.h"; sourceTree = "<group>"; };
+		391E7A4A1C18744E0067F1B3 /* UIView+ChameleonPrivate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ChameleonPrivate.m"; sourceTree = "<group>"; };
+		391E7A4B1C18744E0067F1B3 /* UIViewController+Chameleon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Chameleon.h"; sourceTree = "<group>"; };
+		391E7A4C1C18744E0067F1B3 /* UIViewController+Chameleon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Chameleon.m"; sourceTree = "<group>"; };
+		391E7A4D1C18744E0067F1B3 /* UIAppearance+Swift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAppearance+Swift.h"; sourceTree = "<group>"; };
+		391E7A4E1C18744E0067F1B3 /* UIAppearance+Swift.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAppearance+Swift.m"; sourceTree = "<group>"; };
+		391E7A4F1C18744E0067F1B3 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		391E7A5F1C1874780067F1B3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		391E7A611C18747F0067F1B3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		3999259F1C170A970008A1A1 /* ClipperFan-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ClipperFan-Bridging-Header.h"; sourceTree = "<group>"; };
 		399925A01C170A980008A1A1 /* HFImageEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFImageEditorViewController.h; sourceTree = "<group>"; };
 		399925A11C170A980008A1A1 /* HFImageEditorViewController+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HFImageEditorViewController+Private.h"; sourceTree = "<group>"; };
@@ -70,6 +126,7 @@
 		399925AB1C170CA30008A1A1 /* DemoAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoAppDelegate.m; sourceTree = "<group>"; };
 		399925AC1C170CA30008A1A1 /* DemoImageEditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoImageEditor.h; sourceTree = "<group>"; };
 		399925AD1C170CA30008A1A1 /* DemoImageEditor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoImageEditor.m; sourceTree = "<group>"; };
+		399925B11C175F4F0008A1A1 /* TabellaClipperViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabellaClipperViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +134,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				391E7A621C18747F0067F1B3 /* CoreGraphics.framework in Frameworks */,
+				391E7A601C1874780067F1B3 /* QuartzCore.framework in Frameworks */,
 				399925A81C170C290008A1A1 /* AssetsLibrary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -94,6 +153,8 @@
 		390B04B91C14CD290044D83D = {
 			isa = PBXGroup;
 			children = (
+				391E7A611C18747F0067F1B3 /* CoreGraphics.framework */,
+				391E7A5F1C1874780067F1B3 /* QuartzCore.framework */,
 				399925A71C170C290008A1A1 /* AssetsLibrary.framework */,
 				390B04C41C14CD290044D83D /* ClipperFan */,
 				390B04DC1C14CD290044D83D /* ClipperFanTests */,
@@ -113,13 +174,17 @@
 		390B04C41C14CD290044D83D /* ClipperFan */ = {
 			isa = PBXGroup;
 			children = (
+				391E7A5E1C1874570067F1B3 /* Chameleon */,
+				3999259F1C170A970008A1A1 /* ClipperFan-Bridging-Header.h */,
 				3999259E1C170A810008A1A1 /* ImageEditor */,
 				390B04C51C14CD290044D83D /* AppDelegate.swift */,
+				391E7A2F1C186B550067F1B3 /* UINavigationController+Extension.swift */,
 				390B05461C158F0E0044D83D /* Util.swift */,
+				39034B4A1C18B7500089E2C6 /* UIImage+Extension.swift */,
 				390B054C1C15C10B0044D83D /* Model */,
 				390B05431C158D620044D83D /* ViewControllers */,
 				390B05451C158D740044D83D /* Controllers */,
-				390B05511C15D3090044D83D /* Celle */,
+				390B05511C15D3090044D83D /* Views */,
 				390B04CF1C14CD290044D83D /* Assets.xcassets */,
 				390B04D11C14CD290044D83D /* LaunchScreen.storyboard */,
 				390B04C91C14CD290044D83D /* Main.storyboard */,
@@ -142,8 +207,9 @@
 			isa = PBXGroup;
 			children = (
 				390B04C71C14CD290044D83D /* ViewController.swift */,
-				390B05521C15DF860044D83D /* CollezioneTableViewController.swift */,
+				399925B11C175F4F0008A1A1 /* TabellaClipperViewController.swift */,
 				390B05541C15E45B0044D83D /* MostraClipperViewController.swift */,
+				39034B4E1C18C8050089E2C6 /* ScaffaleViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -166,12 +232,51 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
-		390B05511C15D3090044D83D /* Celle */ = {
+		390B05511C15D3090044D83D /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				390B054F1C15D2F90044D83D /* ClipperCellTableViewCell.swift */,
+				39034B4C1C18C71B0089E2C6 /* ClipperCollectionViewCell.swift */,
+				391E7A311C18716B0067F1B3 /* MQXButton.swift */,
 			);
-			name = Celle;
+			name = Views;
+			sourceTree = "<group>";
+		};
+		391E7A5E1C1874570067F1B3 /* Chameleon */ = {
+			isa = PBXGroup;
+			children = (
+				391E7A331C18744E0067F1B3 /* ChameleonShorthand.swift */,
+				391E7A341C18744E0067F1B3 /* Chameleon.h */,
+				391E7A351C18744E0067F1B3 /* Chameleon_.h */,
+				391E7A361C18744E0067F1B3 /* Chameleon_.m */,
+				391E7A371C18744E0067F1B3 /* ChameleonConstants.h */,
+				391E7A381C18744E0067F1B3 /* ChameleonConstants.m */,
+				391E7A391C18744E0067F1B3 /* ChameleonEnums.h */,
+				391E7A3A1C18744E0067F1B3 /* ChameleonMacros.h */,
+				391E7A3B1C18744E0067F1B3 /* NSArray+Chameleon.h */,
+				391E7A3C1C18744E0067F1B3 /* NSArray+Chameleon.m */,
+				391E7A3D1C18744E0067F1B3 /* UIButton+Chameleon.h */,
+				391E7A3E1C18744E0067F1B3 /* UIButton+Chameleon.m */,
+				391E7A3F1C18744E0067F1B3 /* UIColor+Chameleon.h */,
+				391E7A401C18744E0067F1B3 /* UIColor+Chameleon.m */,
+				391E7A411C18744E0067F1B3 /* UIColor+ChameleonPrivate.h */,
+				391E7A421C18744E0067F1B3 /* UIColor+ChameleonPrivate.m */,
+				391E7A431C18744E0067F1B3 /* UIImage+ChameleonPrivate.h */,
+				391E7A441C18744E0067F1B3 /* UIImage+ChameleonPrivate.m */,
+				391E7A451C18744E0067F1B3 /* UILabel+Chameleon.h */,
+				391E7A461C18744E0067F1B3 /* UILabel+Chameleon.m */,
+				391E7A471C18744E0067F1B3 /* UINavigationController+Chameleon.h */,
+				391E7A481C18744E0067F1B3 /* UINavigationController+Chameleon.m */,
+				391E7A491C18744E0067F1B3 /* UIView+ChameleonPrivate.h */,
+				391E7A4A1C18744E0067F1B3 /* UIView+ChameleonPrivate.m */,
+				391E7A4B1C18744E0067F1B3 /* UIViewController+Chameleon.h */,
+				391E7A4C1C18744E0067F1B3 /* UIViewController+Chameleon.m */,
+				391E7A4D1C18744E0067F1B3 /* UIAppearance+Swift.h */,
+				391E7A4E1C18744E0067F1B3 /* UIAppearance+Swift.m */,
+				391E7A4F1C18744E0067F1B3 /* Info.plist */,
+			);
+			name = Chameleon;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		3999259E1C170A810008A1A1 /* ImageEditor */ = {
@@ -187,7 +292,6 @@
 				399925A21C170A980008A1A1 /* HFImageEditorViewController.m */,
 				399925A31C170A980008A1A1 /* HFImageEditorFrameView.h */,
 				399925A41C170A980008A1A1 /* HFImageEditorFrameView.m */,
-				3999259F1C170A970008A1A1 /* ClipperFan-Bridging-Header.h */,
 			);
 			name = ImageEditor;
 			sourceTree = "<group>";
@@ -278,6 +382,7 @@
 				390B04D31C14CD290044D83D /* LaunchScreen.storyboard in Resources */,
 				390B04D01C14CD290044D83D /* Assets.xcassets in Resources */,
 				390B04CB1C14CD290044D83D /* Main.storyboard in Resources */,
+				391E7A5D1C18744E0067F1B3 /* Info.plist in Resources */,
 				399925AE1C170CA30008A1A1 /* DemoImageEditor.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,20 +401,38 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				391E7A511C18744E0067F1B3 /* Chameleon_.m in Sources */,
 				390B04C81C14CD290044D83D /* ViewController.swift in Sources */,
 				399925A61C170A980008A1A1 /* HFImageEditorFrameView.m in Sources */,
+				391E7A301C186B550067F1B3 /* UINavigationController+Extension.swift in Sources */,
+				391E7A541C18744E0067F1B3 /* UIButton+Chameleon.m in Sources */,
+				391E7A581C18744E0067F1B3 /* UILabel+Chameleon.m in Sources */,
+				391E7A591C18744E0067F1B3 /* UINavigationController+Chameleon.m in Sources */,
 				390B054B1C1593800044D83D /* Clipper.swift in Sources */,
 				399925A51C170A980008A1A1 /* HFImageEditorViewController.m in Sources */,
 				390B05421C158D5B0044D83D /* ClipperController.swift in Sources */,
-				390B05531C15DF860044D83D /* CollezioneTableViewController.swift in Sources */,
+				391E7A571C18744E0067F1B3 /* UIImage+ChameleonPrivate.m in Sources */,
+				39034B4F1C18C8050089E2C6 /* ScaffaleViewController.swift in Sources */,
+				391E7A5A1C18744E0067F1B3 /* UIView+ChameleonPrivate.m in Sources */,
+				39034B4D1C18C71B0089E2C6 /* ClipperCollectionViewCell.swift in Sources */,
+				391E7A551C18744E0067F1B3 /* UIColor+Chameleon.m in Sources */,
 				390B054A1C1593800044D83D /* Clipper+CoreDataProperties.swift in Sources */,
 				390B05501C15D2F90044D83D /* ClipperCellTableViewCell.swift in Sources */,
+				391E7A531C18744E0067F1B3 /* NSArray+Chameleon.m in Sources */,
+				391E7A561C18744E0067F1B3 /* UIColor+ChameleonPrivate.m in Sources */,
 				390B05551C15E45B0044D83D /* MostraClipperViewController.swift in Sources */,
 				399925B01C170CA30008A1A1 /* DemoImageEditor.m in Sources */,
+				391E7A5C1C18744E0067F1B3 /* UIAppearance+Swift.m in Sources */,
+				391E7A501C18744E0067F1B3 /* ChameleonShorthand.swift in Sources */,
 				399925AF1C170CA30008A1A1 /* DemoAppDelegate.m in Sources */,
 				390B05471C158F0E0044D83D /* Util.swift in Sources */,
+				391E7A321C18716B0067F1B3 /* MQXButton.swift in Sources */,
 				390B04C61C14CD290044D83D /* AppDelegate.swift in Sources */,
 				390B04CE1C14CD290044D83D /* ClipperFan.xcdatamodeld in Sources */,
+				399925B21C175F4F0008A1A1 /* TabellaClipperViewController.swift in Sources */,
+				39034B4B1C18B7500089E2C6 /* UIImage+Extension.swift in Sources */,
+				391E7A521C18744E0067F1B3 /* ChameleonConstants.m in Sources */,
+				391E7A5B1C18744E0067F1B3 /* UIViewController+Chameleon.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

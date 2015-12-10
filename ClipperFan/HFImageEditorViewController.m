@@ -9,7 +9,7 @@ typedef struct {
 
 static const CGFloat kMaxUIImageSize = 1024;
 static const CGFloat kPreviewImageSize = 120;
-static const CGFloat kDefaultCropWidth = 320;
+static const CGFloat kDefaultCropWidth = 80;
 static const CGFloat kDefaultCropHeight = 320;
 static const CGFloat kBoundingBoxInset = 15;
 static const NSTimeInterval kAnimationIntervalReset = 0.25;
@@ -292,6 +292,23 @@ static const NSTimeInterval kAnimationIntervalTransform = 0.2;
     [self reset:YES];
 }
 
+-(UIImage *)makeRoundedImage:(UIImage *) image radius: (float) radius;
+{
+    CALayer *imageLayer = [CALayer layer];
+    imageLayer.frame = CGRectMake(0, 0, image.size.width, image.size.height);
+    imageLayer.contents = (id) image.CGImage;
+    
+    imageLayer.masksToBounds = YES;
+    imageLayer.cornerRadius = radius;
+    
+    UIGraphicsBeginImageContext(image.size);
+    [imageLayer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *roundedImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return roundedImage;
+}
+
 
 - (IBAction)doneAction:(id)sender
 {
@@ -308,6 +325,24 @@ static const NSTimeInterval kAnimationIntervalTransform = 0.2;
                                     imageViewSize:self.imageView.bounds.size];
         dispatch_async(dispatch_get_main_queue(), ^{
             UIImage *transform =  [UIImage imageWithCGImage:resultRef scale:1.0 orientation:UIImageOrientationUp];
+            
+            UIImage *image = transform;
+            
+            CALayer *imageLayer = [CALayer layer];
+            imageLayer.frame = CGRectMake(0, 0, image.size.width, image.size.height);
+            imageLayer.contents = (id) image.CGImage;
+            
+            imageLayer.masksToBounds = YES;
+            imageLayer.cornerRadius = 30;
+            
+            UIGraphicsBeginImageContext(image.size);
+            [imageLayer renderInContext:UIGraphicsGetCurrentContext()];
+            UIImage *roundedImage = UIGraphicsGetImageFromCurrentImageContext();
+            UIGraphicsEndImageContext();
+            
+            transform = roundedImage;
+            
+            
             CGImageRelease(resultRef);
             self.view.userInteractionEnabled = YES;
             if(self.doneCallback) {

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class MostraClipperViewController: UIViewController {
 
@@ -14,23 +15,38 @@ class MostraClipperViewController: UIViewController {
     @IBOutlet weak var descrizioneTF: UITextField!
     @IBOutlet weak var nomeTF: UITextField!
     
+    @IBOutlet var textFields: [UITextField]!
+
+    @IBOutlet var labels: [UILabel]!
+    
+    @IBOutlet var buttons: [MQXButton]!
+    
+    @IBOutlet weak var immagineSfondo: UIImageView!
+    
     var clipper: ClipperData? = ClipperData()
+    
     var salvare = false;
     
-    let imagePicker = UIImagePickerController()
+    lazy var imagePicker = UIImagePickerController()
     
-    var imageEditor = DemoImageEditor()
-    var library =  ALAssetsLibrary()
+    lazy var imageEditor = DemoImageEditor()
+    lazy var library =  ALAssetsLibrary()
+    
+    var coloriImmagine = [UIColor]()
+    var coloriGradiente = [UIColor]()
+    var primaryColor = UIColor()
+    var secondaryColor = UIColor()
+    var gradientColor = UIColor()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let tapGestureRecognizer = UITapGestureRecognizer(target:self, action:Selector("imageTapped:"))
-        immagineIV.userInteractionEnabled = true
-        immagineIV.addGestureRecognizer(tapGestureRecognizer)
+        impostaTapSullImmagine()
+        
         imagePicker.delegate = self
-        immagineIV.image = clipper?.immagine
-        descrizioneTF.text = clipper?.descrizione == "Nessuna descrizione" ? "" : clipper?.descrizione
-        nomeTF.text = clipper?.nome == "Nessun nome" ? "" : clipper?.nome
+        
+        riempiDati()
+        
+        configuraColori()
         // Do any additional setup after loading the view.
     }
     
@@ -44,10 +60,83 @@ class MostraClipperViewController: UIViewController {
             ClipperController.inserisciClipper(clipper!)
         }
     }
+    
+
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?){
+        view.endEditing(true)
+        super.touchesBegan(touches, withEvent: event)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func configuraColori()
+    {
+        immagineIV.layer.cornerRadius = 4
+        immagineIV.clipsToBounds = true
+        immagineIV.setNeedsDisplay()
+        
+        let immagine = Util.tagliaImmagineInset(immagineIV.image!, dx:10, dy:150)
+        //immagineIV.image = immagine
+        coloriImmagine = ColorsFromImage(immagine, withFlatScheme: false)
+        
+        coloriGradiente = [coloriImmagine[0],coloriImmagine[2],coloriImmagine[4]]
+        
+        primaryColor = coloriImmagine[0]
+        secondaryColor = coloriImmagine[1]
+        
+        /*
+        gradientColor = GradientColor(.TopToBottom, frame: self.view.frame, colors: coloriImmagine)
+        
+        self.view.backgroundColor = gradientColor
+        */
+        immagineSfondo.image = immagine
+        /*
+        //BLUR STUFF
+        let blur = UIBlurEffect(style: UIBlurEffectStyle.Light)
+        let view = UIVisualEffectView(effect: blur)
+        view.frame = self.view.frame
+        self.view.addSubview(view)
+        self.view.sendSubviewToBack(view)
+        */
+        
+        
+        self.setStatusBarStyle(UIStatusBarStyleContrast)
+        
+        for label in labels
+        {
+            label.textColor = ContrastColorOf(coloriImmagine[0], returnFlat: false)
+        }
+        
+        for button in buttons
+        {
+            button.backgroundColor = secondaryColor
+            button.layer.borderColor = primaryColor.CGColor
+            button.setTitleColor(ContrastColorOf(secondaryColor, returnFlat: false), forState: .Normal)
+        }
+        
+        for textField in textFields
+        {
+            textField.textColor = ContrastColorOf(coloriImmagine[0], returnFlat: false)
+            textField.layer.borderWidth = 1
+            textField.layer.borderColor = ContrastColorOf(primaryColor, returnFlat: false).CGColor
+        }
+    }
+    
+    func impostaTapSullImmagine()
+    {
+        let tapGestureRecognizer = UITapGestureRecognizer(target:self, action:Selector("imageTapped:"))
+        immagineIV.userInteractionEnabled = true
+        immagineIV.addGestureRecognizer(tapGestureRecognizer)
+    }
+    
+    func riempiDati()
+    {
+        immagineIV.image = clipper?.immagine
+        descrizioneTF.text = clipper?.descrizione == "Nessuna descrizione" ? "" : clipper?.descrizione
+        nomeTF.text = clipper?.nome == "Nessun nome" ? "" : clipper?.nome
     }
     
     func imageTapped(img: AnyObject)
@@ -181,13 +270,6 @@ class MostraClipperViewController: UIViewController {
 extension MostraClipperViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate
 {
     //The UIImagePickerController is a view controller that gets presented modally. When we select or cancel the picker, it runs the delegate, where we handle the case and dismiss the modal.
-    
-    
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
-        print("finished picking image")
-    }
-    
-    
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         //handle media here i.e. do stuff with photo
         
@@ -199,7 +281,23 @@ extension MostraClipperViewController: UIImagePickerControllerDelegate, UINaviga
         
         //IMAGE EDITING STUFF
         
-        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        var image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        
+        //IMAGE RESIZING STUFF
+        
+        //let size = CGSizeApplyAffineTransform(image.size, CGAffineTransformMakeScale(0.2, 0.2))
+        let size = AVMakeRectWithAspectRatioInsideRect(image.size, CGRect(x: 0, y: 0, width: 80*3, height: 320*3))
+        let hasAlpha = false
+        let scale: CGFloat = 0.0 // Automatically use scale factor of main screen
+        
+        UIGraphicsBeginImageContextWithOptions(size.size, !hasAlpha, scale)
+        image.drawInRect(CGRect(origin: CGPointZero, size: size.size))
+        
+        let scaledImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        image = scaledImage
+        //IMAGE RESIZING STUFF
+        
         if (picker.sourceType == .Camera)
         {
             let completionBlock = {(assetUrl: NSURL!, error: NSError!) in

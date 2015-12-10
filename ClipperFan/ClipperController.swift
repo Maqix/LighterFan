@@ -66,6 +66,24 @@ class ClipperController
     
     class func getClippers() -> [ClipperData]
     {
+        /*
+        print("Chiamate FAKE getClippers()")
+        var array = [ClipperData]()
+        
+        for i in 1...100
+        {
+            var clipper = ClipperData()
+            clipper.nome = "Clipper \(i)"
+            array.append(clipper)
+        }
+        
+        return array
+        */
+        return getClippersBakcup()
+    }
+    
+    class func getClippersBakcup() -> [ClipperData]
+    {
         var array = [ClipperData]()
         
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
@@ -73,7 +91,9 @@ class ClipperController
         let richiesta = NSFetchRequest(entityName: "Clipper")
         
         do {
+            //print("Chiedo i clipper a Core Data")
             let risultati = try moc.executeFetchRequest(richiesta) as! [Clipper]
+            //print("Ho ottenuto i clipper da Core Data")
             for risultato in risultati
             {
                 if (risultato.id != nil && risultato.nome != nil)
