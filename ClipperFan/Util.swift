@@ -113,29 +113,87 @@ class Util: NSObject
         return stitchedImages
     }
     
-    func immagineQuadrataFromArray(images: [UIImage]) -> UIImage
+    func immagineQuadrataFromArray(var images: [UIImage]) -> UIImage
     {
         var arrayRighe = [UIImage]()
         let numeroImmagini = images.count
-        //Il lato viene decrementato di 1 perchè gli array partono da 0
-        let lato = Int(sqrt(Float(numeroImmagini))) - 1
-        
-        //Costruisco l'array di righe
-        var partenza = 0
-        for i in 0...lato
+        let latoDouble = sqrt(Double(numeroImmagini))
+        var matrice = UIImage()
+        //Se le immagini non sono un numero "quadrato" aggiungo immagini vuote fino ad ottenerlo
+        print("\(latoDouble).isInteger = \(latoDouble.isInteger)")
+        if (latoDouble.isInteger)
         {
-            print("Giro \(i): Partenza = \(partenza) Partenza+Lato = \(partenza+lato)")
-            let immaginiRiga = images[partenza...partenza+lato]
-            let riga = stitchImages(Array(immaginiRiga), isVertical: false)
-            arrayRighe.append(riga)
-            if (partenza%lato==0)
+            //Il lato viene decrementato di 1 perchè gli array partono da 0
+            let lato = Int(sqrt(Float(numeroImmagini))) - 1
+            let latoVero = lato + 1
+            //Costruisco l'array di righe
+            var partenza = 0
+            for i in 0...lato
             {
-                partenza += lato
+                print("Giro \(i): Partenza = \(partenza) Partenza+LatoVero = \(partenza+lato) Lato: \(lato) LatoVero \(latoVero)")
+                
+                let immaginiRiga = images[partenza...partenza+lato]
+                
+                let riga = stitchImages(Array(immaginiRiga), isVertical: false)
+                arrayRighe.append(riga)
+                if (partenza%latoVero==0)
+                {
+                    partenza += latoVero
+                }
             }
+            //Unisco le righe verticalmente per ottenere una matrice
+            matrice = stitchImages(arrayRighe, isVertical: true)
+        }else
+        {
+            
+            //Trovo il più piccolo numero che è un "quadrato" maggiore di numeroImmagini
+            var esci = false
+            var quadratoMinimo = numeroImmagini
+            while (!esci)
+            {
+                quadratoMinimo++
+                if (sqrt(Double(quadratoMinimo)).isInteger)
+                {
+                    print("Quadrato Minimo = \(quadratoMinimo)")
+                    esci = true
+                }
+            }
+            let numeroImmaginiDaAggiungere = quadratoMinimo - numeroImmagini
+            
+            
+            
+            var imagesCompleto = [UIImage]()
+            imagesCompleto += images
+            for _ in 1...(quadratoMinimo-numeroImmagini)
+            {
+                var imageBlank = images[0].copy() as! UIImage
+                imageBlank = imageBlank.filledImageWithColor(UIColor.whiteColor(), scale: UIScreen.mainScreen().scale)
+                imagesCompleto.append(imageBlank)
+            }
+            
+            print("Ho un array di \(images.count) immagini\nil numero quadrato maggiore più piccolo è \(quadratoMinimo)\nquindi aggiungo \(numeroImmaginiDaAggiungere) immagni\n e ora l'array ha \(imagesCompleto.count) immagini")
+            
+            
+            let lato = Int(sqrt(Float(imagesCompleto.count))) - 1
+            let latoVero = lato + 1
+            //Costruisco l'array di righe
+            var partenza = 0
+            arrayRighe = [UIImage]()
+            for _ in 0...lato
+            {
+                //print("Giro \(i): Partenza = \(partenza) Partenza+Lato = \(partenza+lato)")
+                let immaginiRiga = imagesCompleto[partenza...partenza+lato]
+                let riga = stitchImages(Array(immaginiRiga), isVertical: false)
+                arrayRighe.append(riga)
+                if (partenza%latoVero==0)
+                {
+                    partenza += latoVero
+                }
+            }
+            //Unisco le righe verticalmente per ottenere una matrice
+            matrice = stitchImages(arrayRighe, isVertical: true)
         }
         
-        //Unisco le righe verticalmente per ottenere una matrice
-        let matrice = stitchImages(arrayRighe, isVertical: true)
         
         return matrice
     }

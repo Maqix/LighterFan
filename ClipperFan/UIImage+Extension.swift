@@ -8,6 +8,13 @@
 
 import UIKit
 
+extension Double {
+    var isInteger:Bool {
+        return self == Double(Int(self))
+    }
+}
+
+
 extension UIImage {
     func crop(var rect: CGRect) -> UIImage {
         
@@ -20,6 +27,29 @@ extension UIImage {
         let imageRef = CGImageCreateWithImageInRect(self.CGImage, rect)
         let image = UIImage(CGImage: imageRef!, scale: self.scale, orientation: self.imageOrientation)
         return image
+    }
+}
+
+extension UIImage
+{
+    ///Per ottenere scale -> UIScreen.mainScreen.scale
+    func filledImageWithColor(color: UIColor, scale: CGFloat) -> UIImage
+    {
+        UIGraphicsBeginImageContextWithOptions(self.size, false, scale)
+        let context = UIGraphicsGetCurrentContext()
+        color.setFill()
+        CGContextTranslateCTM(context, 0, self.size.height)
+        CGContextScaleCTM(context, 1.0, -1.0)
+        CGContextSetBlendMode(context, .ColorBurn)
+        let rect = CGRect(x: 0, y: 0, width: self.size.width, height: self.size.height)
+        CGContextDrawImage(context, rect, self.CGImage)
+        CGContextSetBlendMode(context, .SourceIn)
+        CGContextAddRect(context, rect)
+        CGContextDrawPath(context, CGPathDrawingMode.FillStroke)
+        let coloredImg = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return coloredImg
+        
     }
 }
 
