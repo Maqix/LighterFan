@@ -62,6 +62,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="clipperMan2" width="400" height="400"/>
+        <image name="clipperMan2" width="254" height="312"/>
     </resources>
 </document>

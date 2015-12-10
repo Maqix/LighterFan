@@ -15,6 +15,7 @@ class ScaffaleViewController: UIViewController, LanciatoreMostraClipper {
     var cellaSelezionata = 0
 
     @IBOutlet weak var collectionView: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -61,7 +62,7 @@ class ScaffaleViewController: UIViewController, LanciatoreMostraClipper {
 }
 
 
-extension ScaffaleViewController: UICollectionViewDataSource, UICollectionViewDelegate
+extension ScaffaleViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout
 {
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
             return 1
@@ -85,4 +86,21 @@ extension ScaffaleViewController: UICollectionViewDataSource, UICollectionViewDe
         cellaSelezionata = indexPath.row
         performSegueWithIdentifier("clipperCollectionToMostraClipper", sender: self)
     }
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat
+    {
+        return 0
+    }
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat
+    {
+        return 0
+    }
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets
+    {
+        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+    }
+
+
 }
