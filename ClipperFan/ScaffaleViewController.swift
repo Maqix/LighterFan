@@ -9,6 +9,10 @@
 import UIKit
 
 class ScaffaleViewController: UIViewController {
+    
+    var clipperArray = ClipperController.getClippers()
+    
+    var cellaSelezionata = 0
 
     @IBOutlet weak var collectionView: UICollectionView!
     override func viewDidLoad() {
@@ -22,6 +26,11 @@ class ScaffaleViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillAppear(animated: Bool)
+    {
+        clipperArray = ClipperController.getClippers()
+        collectionView.reloadData()
+    }
 
     /*
     // MARK: - Navigation
@@ -35,9 +44,23 @@ class ScaffaleViewController: UIViewController {
 
 }
 
-/*
+
 extension ScaffaleViewController: UICollectionViewDataSource, UICollectionViewDelegate
 {
+    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+            return 1
+    }
     
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+            return clipperArray.count
+    }
+    
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+            
+            let cell = collectionView.dequeueReusableCellWithReuseIdentifier("ClipperCollectionViewCell", forIndexPath: indexPath) as! ClipperCollectionViewCell
+        
+            cell.datiClipper = clipperArray[indexPath.row]
+            
+            return cell
+    }
 }
-*/

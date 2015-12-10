@@ -18,5 +18,6 @@ extension Clipper {
     @NSManaged var nome: String?
     @NSManaged var descrizione: String?
     @NSManaged var immagine: NSData?
+    @NSManaged var immagineSfocata: NSData?
 
 }

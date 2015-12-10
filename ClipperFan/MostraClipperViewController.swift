@@ -23,6 +23,7 @@ class MostraClipperViewController: UIViewController {
     
     @IBOutlet weak var immagineSfondo: UIImageView!
     
+    @IBOutlet weak var blurView: UIVisualEffectView!
     var clipper: ClipperData? = ClipperData()
     
     var salvare = false;
@@ -57,6 +58,7 @@ class MostraClipperViewController: UIViewController {
             clipper?.nome = nomeTF.text!
             clipper?.descrizione = descrizioneTF.text!
             clipper?.immagine = immagineIV.image
+            clipper?.immagineSfocata = Util.tagliaImmagineInset(immagineIV.image!, dx:10, dy:150).applyLightEffect()
             ClipperController.inserisciClipper(clipper!)
         }
     }
@@ -92,7 +94,7 @@ class MostraClipperViewController: UIViewController {
         
         self.view.backgroundColor = gradientColor
         */
-        immagineSfondo.image = immagine
+        immagineSfondo.image = clipper?.immagineSfocata
         /*
         //BLUR STUFF
         let blur = UIBlurEffect(style: UIBlurEffectStyle.Light)
@@ -107,22 +109,39 @@ class MostraClipperViewController: UIViewController {
         
         for label in labels
         {
-            label.textColor = ContrastColorOf(coloriImmagine[0], returnFlat: false)
+            if (clipper?.nome != "Nessun nome")
+            {
+                label.textColor = ContrastColorOf(coloriImmagine[0], returnFlat: false)
+            }
         }
         
         for button in buttons
         {
-            button.backgroundColor = secondaryColor
-            button.layer.borderColor = primaryColor.CGColor
-            button.setTitleColor(ContrastColorOf(secondaryColor, returnFlat: false), forState: .Normal)
+            if (clipper?.nome != "Nessun nome")
+            {
+                button.backgroundColor = secondaryColor
+                button.layer.borderColor = primaryColor.CGColor
+                button.setTitleColor(ContrastColorOf(secondaryColor, returnFlat: false), forState: .Normal)
+            }
         }
         
         for textField in textFields
         {
-            textField.textColor = ContrastColorOf(coloriImmagine[0], returnFlat: false)
             textField.layer.borderWidth = 1
-            textField.layer.borderColor = ContrastColorOf(primaryColor, returnFlat: false).CGColor
+            if (clipper?.nome != "Nessun nome")
+            {
+                textField.textColor = ContrastColorOf(coloriImmagine[0], returnFlat: false)
+                textField.layer.borderColor = ContrastColorOf(primaryColor, returnFlat: false).CGColor
+            }else
+            {
+                textField.layer.borderColor = UIColor.blackColor().CGColor
+            }
         }
+    }
+    
+    override func viewDidLayoutSubviews()
+    {
+        //
     }
     
     func impostaTapSullImmagine()

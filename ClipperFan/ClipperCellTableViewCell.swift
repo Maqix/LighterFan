@@ -38,7 +38,7 @@ class ClipperCellTableViewCell: UITableViewCell {
             view.frame = self.frame
             self.sendSubviewToBack(view)
             */
-            immagineSfondo.image = datiClipper?.immagine
+            immagineSfondo.image = datiClipper?.immagineSfocata
             
             //let coloreMedio = AverageColorFromImage((datiClipper?.immagine)!)
             //let contrastColor = ContrastColorOf(coloreMedio, returnFlat: false)

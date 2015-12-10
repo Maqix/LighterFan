@@ -17,6 +17,7 @@ struct ClipperData
     var nome:           String
     var descrizione:    String
     var immagine:       UIImage?
+    var immagineSfocata: UIImage?
     
     init(clipper: Clipper)
     {
@@ -30,6 +31,13 @@ struct ClipperData
                 self.immagine = immagine
             }
         }
+        if let data = clipper.immagineSfocata
+        {
+            if let immagine = UIImage(data: data)
+            {
+                self.immagineSfocata = immagine
+            }
+        }
     }
     
     init()
@@ -38,6 +46,7 @@ struct ClipperData
         nome = "Nessun nome"
         descrizione = "Nessuna descrizione"
         immagine = UIImage(named: "clipperSample")
+        immagineSfocata = Util.tagliaImmagineInset((UIImage(named: "clipperSample"))!, dx:30, dy:250).applyLightEffect()
     }
 }
 
@@ -134,6 +143,14 @@ class ClipperController
                     clipper.immagine = data
                 }
             }
+            if let immagineSfocata = clipperData.immagineSfocata
+            {
+                if let pngRepresentation = UIImagePNGRepresentation(immagineSfocata)
+                {
+                    let data = NSData(data: pngRepresentation)
+                    clipper.immagineSfocata = data
+                }
+            }
             
             //E lo salvo
             appDelegate.saveAction(self)
@@ -183,6 +200,14 @@ class ClipperController
                         {
                             let data = NSData(data: pngRepresentation)
                             risultato.immagine = data
+                        }
+                    }
+                    if let immagineSfocata = clipperData.immagineSfocata
+                    {
+                        if let pngRepresentation = UIImagePNGRepresentation(immagineSfocata)
+                        {
+                            let data = NSData(data: pngRepresentation)
+                            risultato.immagineSfocata = data
                         }
                     }
                     //E lo salvo
