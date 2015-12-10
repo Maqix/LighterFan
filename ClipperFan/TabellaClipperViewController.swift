@@ -8,7 +8,12 @@
 
 import UIKit
 
-class TabellaClipperViewController: UIViewController {
+protocol LanciatoreMostraClipper
+{
+    func reloadTable()
+}
+
+class TabellaClipperViewController: UIViewController, LanciatoreMostraClipper {
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -16,6 +21,10 @@ class TabellaClipperViewController: UIViewController {
     
     var cellaSelezionata = 0
 
+    func reloadTable() {
+        clipperArray = ClipperController.getClippers()
+        tableView.reloadData()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,8 +34,7 @@ class TabellaClipperViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool)
     {
-        clipperArray = ClipperController.getClippers()
-        tableView.reloadData()
+        reloadTable()
     }
 
     override func didReceiveMemoryWarning() {
@@ -44,7 +52,12 @@ class TabellaClipperViewController: UIViewController {
         if (segue.identifier == "clipperCellToMostraClipper")
         {
             let vc = segue.destinationViewController as! MostraClipperViewController
+            vc.delegate = self
             vc.clipper = clipperArray[cellaSelezionata]
+        }else
+        {
+            let vc = segue.destinationViewController as! MostraClipperViewController
+            vc.delegate = self
         }
     }
 

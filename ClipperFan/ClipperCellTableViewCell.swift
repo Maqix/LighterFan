@@ -39,6 +39,10 @@ class ClipperCellTableViewCell: UITableViewCell {
             self.sendSubviewToBack(view)
             */
             immagineSfondo.image = datiClipper?.immagineSfocata
+            immagineSfondo.layer.cornerRadius = 4
+            immagineSfondo.layer.borderColor = UIColor.blackColor().CGColor
+            immagineSfondo.layer.borderWidth = 1
+            immagineSfondo.clipsToBounds = true
             
             //let coloreMedio = AverageColorFromImage((datiClipper?.immagine)!)
             //let contrastColor = ContrastColorOf(coloreMedio, returnFlat: false)
@@ -47,9 +51,9 @@ class ClipperCellTableViewCell: UITableViewCell {
             labelNome.layer.cornerRadius = 4
             labelDescrizione.layer.cornerRadius = 4
             labelDescrizione.layer.borderColor = UIColor.blackColor().CGColor
-            labelDescrizione.layer.borderWidth = 2
+            labelDescrizione.layer.borderWidth = 1
             labelNome.layer.borderColor = UIColor.blackColor().CGColor
-            labelNome.layer.borderWidth = 2
+            labelNome.layer.borderWidth = 1
             labelNome.clipsToBounds = true
             labelDescrizione.clipsToBounds = true
 
@@ -71,9 +75,9 @@ class ClipperCellTableViewCell: UITableViewCell {
         self.selectedBackgroundView = backgroundView
         // Initialization code
         self.layer.cornerRadius = 4
-        self.clipsToBounds = true
+        self.clipsToBounds = false
         self.layer.borderColor = FlatBlack().CGColor
-        self.layer.borderWidth = 2
+        self.layer.borderWidth = 0
         self.backgroundView?.alpha = 0.5
     }
 

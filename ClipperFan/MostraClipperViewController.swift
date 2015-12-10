@@ -26,6 +26,8 @@ class MostraClipperViewController: UIViewController {
     @IBOutlet weak var blurView: UIVisualEffectView!
     var clipper: ClipperData? = ClipperData()
     
+    var delegate: LanciatoreMostraClipper?
+    
     var salvare = false;
     
     lazy var imagePicker = UIImagePickerController()
@@ -60,6 +62,7 @@ class MostraClipperViewController: UIViewController {
             clipper?.immagine = immagineIV.image
             clipper?.immagineSfocata = Util.tagliaImmagineInset(immagineIV.image!, dx:10, dy:150).applyLightEffect()
             ClipperController.inserisciClipper(clipper!)
+            delegate?.reloadTable()
         }
     }
     

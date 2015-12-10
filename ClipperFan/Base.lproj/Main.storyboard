@@ -193,11 +193,11 @@
                                             <rect key="frame" x="0.0" y="0.0" width="580" height="199"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tpi-nI-HQE">
-                                                    <rect key="frame" x="0.0" y="0.0" width="580" height="199"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Tpi-nI-HQE">
+                                                    <rect key="frame" x="0.0" y="4" width="580" height="191"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F9b-MC-Oy8" customClass="PaddedLabel" customModule="ClipperFan" customModuleProvider="target">
-                                                    <rect key="frame" x="128" y="8" width="444" height="34"/>
+                                                    <rect key="frame" x="128" y="12" width="444" height="34"/>
                                                     <color key="backgroundColor" red="0.98624199629999998" green="0.77968657019999998" blue="0.0" alpha="0.53000000000000003" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="34" id="IVe-kE-dLS"/>
@@ -218,7 +218,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="59c-yp-3VU" customClass="PaddedLabel" customModule="ClipperFan" customModuleProvider="target">
-                                                    <rect key="frame" x="128" y="60" width="444" height="113"/>
+                                                    <rect key="frame" x="128" y="64" width="444" height="109"/>
                                                     <color key="backgroundColor" red="0.98624199629999998" green="0.77968657019999998" blue="0.0" alpha="0.53000000000000003" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Italic" family="Avenir Next" pointSize="18"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -233,14 +233,18 @@
                                             <constraints>
                                                 <constraint firstAttribute="bottomMargin" secondItem="4hh-ke-w0o" secondAttribute="bottom" id="4kL-py-BgJ"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="F9b-MC-Oy8" secondAttribute="trailing" id="5dI-bY-Z16"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Tpi-nI-HQE" secondAttribute="bottom" constant="-4" id="AyA-KP-lFv"/>
                                                 <constraint firstItem="59c-yp-3VU" firstAttribute="leading" secondItem="4hh-ke-w0o" secondAttribute="trailing" constant="10" id="Btp-aV-5LI"/>
+                                                <constraint firstItem="Tpi-nI-HQE" firstAttribute="top" secondItem="sG1-RC-9Sw" secondAttribute="topMargin" constant="-4" id="NmE-VI-jhh"/>
                                                 <constraint firstItem="4hh-ke-w0o" firstAttribute="leading" secondItem="sG1-RC-9Sw" secondAttribute="leadingMargin" id="YdP-Iv-2aM"/>
                                                 <constraint firstItem="4hh-ke-w0o" firstAttribute="top" secondItem="sG1-RC-9Sw" secondAttribute="topMargin" id="ZaQ-GR-I53"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="59c-yp-3VU" secondAttribute="trailing" id="bFw-hX-61x"/>
                                                 <constraint firstItem="59c-yp-3VU" firstAttribute="top" secondItem="F9b-MC-Oy8" secondAttribute="bottom" constant="18" id="cra-ku-r3r"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="59c-yp-3VU" secondAttribute="bottom" constant="18" id="h0N-p8-GTp"/>
                                                 <constraint firstItem="F9b-MC-Oy8" firstAttribute="leading" secondItem="4hh-ke-w0o" secondAttribute="trailing" constant="10" id="ifq-ZR-dE1"/>
-                                                <constraint firstItem="F9b-MC-Oy8" firstAttribute="top" secondItem="sG1-RC-9Sw" secondAttribute="topMargin" id="rfo-3M-FHZ"/>
+                                                <constraint firstItem="F9b-MC-Oy8" firstAttribute="top" secondItem="sG1-RC-9Sw" secondAttribute="topMargin" constant="4" id="rfo-3M-FHZ"/>
+                                                <constraint firstItem="Tpi-nI-HQE" firstAttribute="leading" secondItem="sG1-RC-9Sw" secondAttribute="leadingMargin" constant="-8" id="roF-bD-SpR"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Tpi-nI-HQE" secondAttribute="trailing" constant="-8" id="x9Q-8z-bkZ"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.98624199628829956" green="0.7796865701675415" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
