@@ -114,7 +114,7 @@ class MostraClipperViewController: UIViewController {
         {
             if (clipper?.nome != "Nessun nome")
             {
-                label.textColor = ContrastColorOf(coloriImmagine[0], returnFlat: false)
+                label.textColor = UIColor.blackColor()
             }
         }
         
@@ -133,8 +133,8 @@ class MostraClipperViewController: UIViewController {
             textField.layer.borderWidth = 1
             if (clipper?.nome != "Nessun nome")
             {
-                textField.textColor = ContrastColorOf(coloriImmagine[0], returnFlat: false)
-                textField.layer.borderColor = ContrastColorOf(primaryColor, returnFlat: false).CGColor
+                textField.textColor = UIColor.blackColor()
+                textField.layer.borderColor = UIColor.blackColor().CGColor
             }else
             {
                 textField.layer.borderColor = UIColor.blackColor().CGColor

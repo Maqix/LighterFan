@@ -13,7 +13,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if(self) {
-        self.cropRect = CGRectMake(0,0,80,320);
+        self.cropRect = CGRectMake(0,0,74,320);
         self.minimumScale = 0.2;
         self.maximumScale = 10;
     }

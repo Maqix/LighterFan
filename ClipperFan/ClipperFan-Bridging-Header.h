@@ -4,6 +4,5 @@
 
 #import "HFImageEditorViewController.h"
 #import <AssetsLibrary/AssetsLibrary.h>
-#import "DemoAppDelegate.h"
 #import "DemoImageEditor.h"
 #import "Chameleon.h"

@@ -70,7 +70,7 @@ class ClipperCellTableViewCell: UITableViewCell {
         let backgroundView = UIView(frame: frame)
         backgroundView.backgroundColor = FlatYellow().lightenByPercentage(1)
         backgroundView.layer.borderColor = FlatBlack().CGColor
-        backgroundView.layer.borderWidth = 2
+        backgroundView.layer.borderWidth = 0
         backgroundView.layer.cornerRadius = 4
         self.selectedBackgroundView = backgroundView
         // Initialization code

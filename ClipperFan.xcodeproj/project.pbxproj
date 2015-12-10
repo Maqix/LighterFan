@@ -45,7 +45,6 @@
 		399925A61C170A980008A1A1 /* HFImageEditorFrameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 399925A41C170A980008A1A1 /* HFImageEditorFrameView.m */; };
 		399925A81C170C290008A1A1 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 399925A71C170C290008A1A1 /* AssetsLibrary.framework */; };
 		399925AE1C170CA30008A1A1 /* DemoImageEditor.xib in Resources */ = {isa = PBXBuildFile; fileRef = 399925A91C170CA30008A1A1 /* DemoImageEditor.xib */; };
-		399925AF1C170CA30008A1A1 /* DemoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 399925AB1C170CA30008A1A1 /* DemoAppDelegate.m */; };
 		399925B01C170CA30008A1A1 /* DemoImageEditor.m in Sources */ = {isa = PBXBuildFile; fileRef = 399925AD1C170CA30008A1A1 /* DemoImageEditor.m */; };
 		399925B21C175F4F0008A1A1 /* TabellaClipperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399925B11C175F4F0008A1A1 /* TabellaClipperViewController.swift */; };
 		39F54C791C199ABD00156850 /* UIImageEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F54C781C199ABD00156850 /* UIImageEffects.swift */; };
@@ -123,8 +122,6 @@
 		399925A41C170A980008A1A1 /* HFImageEditorFrameView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFImageEditorFrameView.m; sourceTree = "<group>"; };
 		399925A71C170C290008A1A1 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		399925A91C170CA30008A1A1 /* DemoImageEditor.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DemoImageEditor.xib; sourceTree = "<group>"; };
-		399925AA1C170CA30008A1A1 /* DemoAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoAppDelegate.h; sourceTree = "<group>"; };
-		399925AB1C170CA30008A1A1 /* DemoAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoAppDelegate.m; sourceTree = "<group>"; };
 		399925AC1C170CA30008A1A1 /* DemoImageEditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoImageEditor.h; sourceTree = "<group>"; };
 		399925AD1C170CA30008A1A1 /* DemoImageEditor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoImageEditor.m; sourceTree = "<group>"; };
 		399925B11C175F4F0008A1A1 /* TabellaClipperViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabellaClipperViewController.swift; sourceTree = "<group>"; };
@@ -176,14 +173,12 @@
 		390B04C41C14CD290044D83D /* ClipperFan */ = {
 			isa = PBXGroup;
 			children = (
-				391E7A5E1C1874570067F1B3 /* Chameleon */,
 				3999259F1C170A970008A1A1 /* ClipperFan-Bridging-Header.h */,
-				3999259E1C170A810008A1A1 /* ImageEditor */,
+				391E7A5E1C1874570067F1B3 /* Chameleon */,
+				3999259E1C170A810008A1A1 /* HFImageEditorViewController */,
+				392EE5881C19C42F00815A71 /* ImageEditor */,
 				390B04C51C14CD290044D83D /* AppDelegate.swift */,
-				391E7A2F1C186B550067F1B3 /* UINavigationController+Extension.swift */,
-				390B05461C158F0E0044D83D /* Util.swift */,
-				39034B4A1C18B7500089E2C6 /* UIImage+Extension.swift */,
-				39F54C781C199ABD00156850 /* UIImageEffects.swift */,
+				392EE5891C19C4D900815A71 /* Utility */,
 				390B054C1C15C10B0044D83D /* Model */,
 				390B05431C158D620044D83D /* ViewControllers */,
 				390B05451C158D740044D83D /* Controllers */,
@@ -282,21 +277,37 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
-		3999259E1C170A810008A1A1 /* ImageEditor */ = {
+		392EE5881C19C42F00815A71 /* ImageEditor */ = {
 			isa = PBXGroup;
 			children = (
 				399925A91C170CA30008A1A1 /* DemoImageEditor.xib */,
-				399925AA1C170CA30008A1A1 /* DemoAppDelegate.h */,
-				399925AB1C170CA30008A1A1 /* DemoAppDelegate.m */,
 				399925AC1C170CA30008A1A1 /* DemoImageEditor.h */,
 				399925AD1C170CA30008A1A1 /* DemoImageEditor.m */,
+			);
+			name = ImageEditor;
+			sourceTree = "<group>";
+		};
+		392EE5891C19C4D900815A71 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				391E7A2F1C186B550067F1B3 /* UINavigationController+Extension.swift */,
+				390B05461C158F0E0044D83D /* Util.swift */,
+				39034B4A1C18B7500089E2C6 /* UIImage+Extension.swift */,
+				39F54C781C199ABD00156850 /* UIImageEffects.swift */,
+			);
+			name = Utility;
+			sourceTree = "<group>";
+		};
+		3999259E1C170A810008A1A1 /* HFImageEditorViewController */ = {
+			isa = PBXGroup;
+			children = (
 				399925A01C170A980008A1A1 /* HFImageEditorViewController.h */,
 				399925A11C170A980008A1A1 /* HFImageEditorViewController+Private.h */,
 				399925A21C170A980008A1A1 /* HFImageEditorViewController.m */,
 				399925A31C170A980008A1A1 /* HFImageEditorFrameView.h */,
 				399925A41C170A980008A1A1 /* HFImageEditorFrameView.m */,
 			);
-			name = ImageEditor;
+			name = HFImageEditorViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -428,7 +439,6 @@
 				399925B01C170CA30008A1A1 /* DemoImageEditor.m in Sources */,
 				391E7A5C1C18744E0067F1B3 /* UIAppearance+Swift.m in Sources */,
 				391E7A501C18744E0067F1B3 /* ChameleonShorthand.swift in Sources */,
-				399925AF1C170CA30008A1A1 /* DemoAppDelegate.m in Sources */,
 				390B05471C158F0E0044D83D /* Util.swift in Sources */,
 				391E7A321C18716B0067F1B3 /* MQXButton.swift in Sources */,
 				390B04C61C14CD290044D83D /* AppDelegate.swift in Sources */,
