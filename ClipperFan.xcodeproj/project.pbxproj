@@ -52,6 +52,8 @@
 		399925B21C175F4F0008A1A1 /* TabellaClipperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399925B11C175F4F0008A1A1 /* TabellaClipperViewController.swift */; };
 		39F54C791C199ABD00156850 /* UIImageEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F54C781C199ABD00156850 /* UIImageEffects.swift */; };
 		39F909711C1BA3E1007E5A43 /* EXPhotoViewer.m in Sources */ = {isa = PBXBuildFile; fileRef = 39F909701C1BA3E1007E5A43 /* EXPhotoViewer.m */; };
+		39F909731C1BB180007E5A43 /* CercaClipperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F909721C1BB180007E5A43 /* CercaClipperViewController.swift */; };
+		39F909761C1BB277007E5A43 /* SwiftColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F909751C1BB277007E5A43 /* SwiftColorPickerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -136,6 +138,8 @@
 		39F54C781C199ABD00156850 /* UIImageEffects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageEffects.swift; sourceTree = "<group>"; };
 		39F9096F1C1BA3E1007E5A43 /* EXPhotoViewer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPhotoViewer.h; sourceTree = "<group>"; };
 		39F909701C1BA3E1007E5A43 /* EXPhotoViewer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXPhotoViewer.m; sourceTree = "<group>"; };
+		39F909721C1BB180007E5A43 /* CercaClipperViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CercaClipperViewController.swift; sourceTree = "<group>"; };
+		39F909751C1BB277007E5A43 /* SwiftColorPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftColorPickerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,6 +221,7 @@
 				39034B4E1C18C8050089E2C6 /* ScaffaleViewController.swift */,
 				390B05541C15E45B0044D83D /* MostraClipperViewController.swift */,
 				395BD2D91C1B165200C4A9E0 /* EsportaCollezioneViewController.swift */,
+				39F909721C1BB180007E5A43 /* CercaClipperViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -312,6 +317,7 @@
 		392EE58A1C19C77D00815A71 /* Librerie */ = {
 			isa = PBXGroup;
 			children = (
+				39F909741C1BB25B007E5A43 /* ColorPickerView */,
 				39F9096E1C1BA3CB007E5A43 /* EXPhotoViewer */,
 				395BD2DB1C1B27A900C4A9E0 /* MBProgressHUD */,
 				391E7A5E1C1874570067F1B3 /* Chameleon */,
@@ -348,6 +354,14 @@
 				39F909701C1BA3E1007E5A43 /* EXPhotoViewer.m */,
 			);
 			name = EXPhotoViewer;
+			sourceTree = "<group>";
+		};
+		39F909741C1BB25B007E5A43 /* ColorPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				39F909751C1BB277007E5A43 /* SwiftColorPickerViewController.swift */,
+			);
+			name = ColorPickerView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -463,6 +477,7 @@
 				391E7A581C18744E0067F1B3 /* UILabel+Chameleon.m in Sources */,
 				391E7A591C18744E0067F1B3 /* UINavigationController+Chameleon.m in Sources */,
 				395BD2D81C1A114400C4A9E0 /* EsportaCollezioneTableViewCell.swift in Sources */,
+				39F909731C1BB180007E5A43 /* CercaClipperViewController.swift in Sources */,
 				390B054B1C1593800044D83D /* Clipper.swift in Sources */,
 				399925A51C170A980008A1A1 /* HFImageEditorViewController.m in Sources */,
 				390B05421C158D5B0044D83D /* ClipperController.swift in Sources */,
@@ -484,6 +499,7 @@
 				390B05471C158F0E0044D83D /* Util.swift in Sources */,
 				39F909711C1BA3E1007E5A43 /* EXPhotoViewer.m in Sources */,
 				395BD2DE1C1B27BB00C4A9E0 /* MBProgressHUD.m in Sources */,
+				39F909761C1BB277007E5A43 /* SwiftColorPickerViewController.swift in Sources */,
 				391E7A321C18716B0067F1B3 /* MQXButton.swift in Sources */,
 				390B04C61C14CD290044D83D /* AppDelegate.swift in Sources */,
 				390B04CE1C14CD290044D83D /* ClipperFan.xcdatamodeld in Sources */,

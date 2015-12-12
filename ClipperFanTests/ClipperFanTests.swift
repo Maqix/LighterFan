@@ -33,11 +33,7 @@ class ClipperFanTests: XCTestCase {
 
             
             //_ = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("MostraClipperViewController") as! MostraClipperViewController
-            /*
-            let imagePicker = UIImagePickerController()
-            let imageEditor = DemoImageEditor()
-            let library =  ALAssetsLibrary()
-            */
+
         }
     }
     

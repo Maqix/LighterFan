@@ -9,7 +9,7 @@
         <!--Cerca Clipper-->
         <scene sceneID="Nsx-Iz-4so">
             <objects>
-                <viewController id="x9N-Qu-5u6" sceneMemberID="viewController">
+                <viewController id="x9N-Qu-5u6" customClass="CercaClipperViewController" customModule="ClipperFan" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ice-pf-Ijo"/>
                         <viewControllerLayoutGuide type="bottom" id="jqh-0T-9wF"/>
@@ -18,53 +18,57 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clipperSearch" translatesAutoresizingMaskIntoConstraints="NO" id="Dcp-7z-eVf">
-                                <rect key="frame" x="20" y="84" width="114" height="165"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qsl-aM-s3K">
+                                <rect key="frame" x="165" y="104" width="270" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LqH-Di-b88" customClass="MQXButton" customModule="ClipperFan" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="40"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="Dl4-ml-gsA"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="OR3-zs-0Q8"/>
+                                            <constraint firstAttribute="height" constant="40" id="XJ5-hV-VnA"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="wJB-OJ-ler"/>
+                                        </constraints>
+                                        <state key="normal" title="Scegli un colore">
+                                            <color key="titleColor" red="0.98431372549999996" green="0.78039215689999997" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="premutoScegliColore:" destination="x9N-Qu-5u6" eventType="touchUpInside" id="P7d-V5-qc8"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bfT-8T-pA7">
+                                        <rect key="frame" x="230" y="0.0" width="40" height="40"/>
+                                        <color key="backgroundColor" red="0.98431372549999996" green="0.78039215689999997" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="2eg-nF-owE"/>
+                                            <constraint firstAttribute="width" constant="40" id="Kkj-OM-Eqi"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="Mce-aE-a0w"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="oA9-45-GZy"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.98431372549999996" green="0.78039215689999997" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="165" id="L9L-p3-p1v"/>
-                                    <constraint firstAttribute="width" constant="114" id="Ls5-kJ-9rT"/>
-                                    <constraint firstAttribute="width" constant="114" id="Re3-Vx-UFF"/>
+                                    <constraint firstItem="LqH-Di-b88" firstAttribute="leading" secondItem="qsl-aM-s3K" secondAttribute="leading" id="3CW-Fg-Abu"/>
+                                    <constraint firstItem="bfT-8T-pA7" firstAttribute="top" secondItem="qsl-aM-s3K" secondAttribute="top" id="3mm-V4-Kac"/>
+                                    <constraint firstAttribute="height" constant="40" id="rLj-bV-aEM"/>
+                                    <constraint firstItem="bfT-8T-pA7" firstAttribute="leading" secondItem="LqH-Di-b88" secondAttribute="trailing" constant="30" id="t2c-gC-rWf"/>
+                                    <constraint firstItem="LqH-Di-b88" firstAttribute="top" secondItem="qsl-aM-s3K" secondAttribute="top" id="tQR-rU-6oD"/>
+                                    <constraint firstAttribute="width" constant="270" id="uOh-JG-nf0"/>
                                 </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="Re3-Vx-UFF"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=compact">
-                                    <mask key="constraints">
-                                        <exclude reference="L9L-p3-p1v"/>
-                                        <exclude reference="Ls5-kJ-9rT"/>
-                                        <include reference="Re3-Vx-UFF"/>
-                                    </mask>
-                                </variation>
-                            </imageView>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.98431372549999996" green="0.78039215689999997" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="Dcp-7z-eVf" firstAttribute="leading" secondItem="bDw-sT-DsI" secondAttribute="leadingMargin" id="9nh-wm-DKF"/>
-                            <constraint firstItem="Dcp-7z-eVf" firstAttribute="top" secondItem="ice-pf-Ijo" secondAttribute="bottom" id="Kv3-pB-Wwc"/>
-                            <constraint firstItem="Dcp-7z-eVf" firstAttribute="top" secondItem="ice-pf-Ijo" secondAttribute="bottom" constant="20" id="pim-9x-rRD"/>
-                            <constraint firstItem="jqh-0T-9wF" firstAttribute="top" secondItem="Dcp-7z-eVf" secondAttribute="bottom" id="sDe-nZ-R4r"/>
-                            <constraint firstItem="Dcp-7z-eVf" firstAttribute="leading" secondItem="bDw-sT-DsI" secondAttribute="leadingMargin" constant="-20" id="xfq-Np-hdD"/>
+                            <constraint firstItem="qsl-aM-s3K" firstAttribute="centerX" secondItem="bDw-sT-DsI" secondAttribute="centerX" id="B55-sB-IuM"/>
+                            <constraint firstItem="qsl-aM-s3K" firstAttribute="top" secondItem="ice-pf-Ijo" secondAttribute="bottom" constant="40" id="qD9-uB-Ifx"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="Kv3-pB-Wwc"/>
-                                <exclude reference="xfq-Np-hdD"/>
-                                <exclude reference="sDe-nZ-R4r"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=compact">
-                            <mask key="constraints">
-                                <exclude reference="9nh-wm-DKF"/>
-                                <include reference="Kv3-pB-Wwc"/>
-                                <exclude reference="pim-9x-rRD"/>
-                                <include reference="xfq-Np-hdD"/>
-                                <include reference="sDe-nZ-R4r"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Cerca Clipper" id="vme-wk-fcf"/>
+                    <connections>
+                        <outlet property="coloreSceltoView" destination="bfT-8T-pA7" id="igg-JD-sfE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ctV-R3-pN8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -941,7 +945,6 @@
     <resources>
         <image name="clipperFan" width="429" height="184"/>
         <image name="clipperMan" width="448" height="651"/>
-        <image name="clipperSearch" width="341" height="527"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="sTw-z5-oHU"/>
