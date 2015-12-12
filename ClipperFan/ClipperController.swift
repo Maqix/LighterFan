@@ -73,6 +73,11 @@ class ClipperController
         return clipper
     }
     
+    class func getClippersImages() -> [UIImage]
+    {
+        return ClipperController.getClippers().map { $0.immagine! }
+    }
+    
     class func getClippers() -> [ClipperData]
     {
         /*

@@ -43,7 +43,7 @@ extension UIImage
         CGContextSetBlendMode(context, .ColorBurn)
         let rect = CGRect(x: 0, y: 0, width: self.size.width, height: self.size.height)
         CGContextDrawImage(context, rect, self.CGImage)
-        CGContextSetBlendMode(context, .SourceIn)
+        CGContextSetBlendMode(context, .Normal)
         CGContextAddRect(context, rect)
         CGContextDrawPath(context, CGPathDrawingMode.FillStroke)
         let coloredImg = UIGraphicsGetImageFromCurrentImageContext()
@@ -51,6 +51,33 @@ extension UIImage
         return coloredImg
         
     }
+    
+    func imageByApplyingAlpha(alpha: CGFloat, scale: CGFloat) -> UIImage
+    {
+        UIGraphicsBeginImageContextWithOptions(self.size, false, scale)
+        let ctx = UIGraphicsGetCurrentContext()
+        let area = CGRect(x: 0, y: 0, width: self.size.width, height: self.size.height)
+        CGContextScaleCTM(ctx, 1, -1)
+        CGContextTranslateCTM(ctx, 0, -area.size.height)
+        CGContextSetBlendMode(ctx, .Multiply)
+        CGContextSetAlpha(ctx, alpha)
+        CGContextDrawImage(ctx, area, self.CGImage)
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return newImage
+    }
+    
+    func mergeWithImage(backImage: UIImage) -> UIImage
+    {
+        let rect = CGRect(x: 0, y: 0, width: backImage.size.width, height: backImage.size.height)
+        UIGraphicsBeginImageContextWithOptions(self.size, false, scale)
+        backImage.drawInRect(rect)
+        self.drawInRect(rect)
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return newImage
+    }
+    
 }
 
 @IBDesignable

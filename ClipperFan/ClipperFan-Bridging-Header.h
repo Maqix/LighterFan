@@ -6,3 +6,5 @@
 #import <AssetsLibrary/AssetsLibrary.h>
 #import "DemoImageEditor.h"
 #import "Chameleon.h"
+#import "MBProgressHUD.h"
+#import "EXPhotoViewer.h"

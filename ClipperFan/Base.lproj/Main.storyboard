@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clipperSearch" translatesAutoresizingMaskIntoConstraints="NO" id="Dcp-7z-eVf">
-                                <rect key="frame" x="0.0" y="64" width="114" height="165"/>
+                                <rect key="frame" x="20" y="84" width="114" height="165"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="165" id="L9L-p3-p1v"/>
                                     <constraint firstAttribute="width" constant="114" id="Ls5-kJ-9rT"/>
@@ -41,9 +41,9 @@
                         </subviews>
                         <color key="backgroundColor" red="0.98431372549999996" green="0.78039215689999997" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="Dcp-7z-eVf" firstAttribute="leading" secondItem="bDw-sT-DsI" secondAttribute="leadingMargin" constant="-20" id="9nh-wm-DKF"/>
+                            <constraint firstItem="Dcp-7z-eVf" firstAttribute="leading" secondItem="bDw-sT-DsI" secondAttribute="leadingMargin" id="9nh-wm-DKF"/>
                             <constraint firstItem="Dcp-7z-eVf" firstAttribute="top" secondItem="ice-pf-Ijo" secondAttribute="bottom" id="Kv3-pB-Wwc"/>
-                            <constraint firstItem="Dcp-7z-eVf" firstAttribute="top" secondItem="ice-pf-Ijo" secondAttribute="bottom" id="pim-9x-rRD"/>
+                            <constraint firstItem="Dcp-7z-eVf" firstAttribute="top" secondItem="ice-pf-Ijo" secondAttribute="bottom" constant="20" id="pim-9x-rRD"/>
                             <constraint firstItem="jqh-0T-9wF" firstAttribute="top" secondItem="Dcp-7z-eVf" secondAttribute="bottom" id="sDe-nZ-R4r"/>
                             <constraint firstItem="Dcp-7z-eVf" firstAttribute="leading" secondItem="bDw-sT-DsI" secondAttribute="leadingMargin" constant="-20" id="xfq-Np-hdD"/>
                         </constraints>
@@ -69,6 +69,63 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ctV-R3-pN8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2053" y="-490"/>
+        </scene>
+        <!--Esporta-->
+        <scene sceneID="g5y-OA-ciU">
+            <objects>
+                <viewController id="rPC-xu-EVk" customClass="EsportaCollezioneViewController" customModule="ClipperFan" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Wht-Vv-QBb"/>
+                        <viewControllerLayoutGuide type="bottom" id="hwn-QQ-1Oq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4r0-VZ-Ukv">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cgO-nW-vZi">
+                                <rect key="frame" x="20" y="76" width="560" height="514"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iz0-XA-cYl" customClass="MQXButton" customModule="ClipperFan" customModuleProvider="target">
+                                <rect key="frame" x="200" y="280" width="200" height="40"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="FlD-Pn-7Na"/>
+                                    <constraint firstAttribute="width" constant="200" id="qcc-3Y-o9g"/>
+                                </constraints>
+                                <state key="normal" title="Genera Immagine">
+                                    <color key="titleColor" red="0.98431372549999996" green="0.78039215689999997" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="premutoGeneraImmagine:" destination="rPC-xu-EVk" eventType="touchUpInside" id="ajx-TD-1cc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98431372549999996" green="0.78039215689999997" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="cgO-nW-vZi" firstAttribute="top" secondItem="4r0-VZ-Ukv" secondAttribute="topMargin" constant="76" id="8dK-Sa-kbI"/>
+                            <constraint firstItem="Iz0-XA-cYl" firstAttribute="centerY" secondItem="4r0-VZ-Ukv" secondAttribute="centerY" id="Iar-40-oEF"/>
+                            <constraint firstItem="Iz0-XA-cYl" firstAttribute="centerX" secondItem="4r0-VZ-Ukv" secondAttribute="centerX" id="Zxb-4s-Y5n"/>
+                            <constraint firstItem="hwn-QQ-1Oq" firstAttribute="top" secondItem="cgO-nW-vZi" secondAttribute="bottom" constant="10" id="ec4-yP-On1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cgO-nW-vZi" secondAttribute="trailing" id="uCt-qP-Wi3"/>
+                            <constraint firstItem="cgO-nW-vZi" firstAttribute="leading" secondItem="4r0-VZ-Ukv" secondAttribute="leadingMargin" id="xEa-il-kf3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Esporta" id="EmO-u4-ffj">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="KcR-SE-y28">
+                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="premutoShare:" destination="rPC-xu-EVk" id="AdM-RP-z7z"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="buttonGeneraImmagine" destination="Iz0-XA-cYl" id="4Rk-3T-cdb"/>
+                        <outlet property="imageView" destination="cgO-nW-vZi" id="yiG-ZA-bAY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OPM-wb-2cC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2767" y="1047"/>
         </scene>
         <!--Menu-->
         <scene sceneID="tne-QT-ifu">
@@ -220,43 +277,43 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="2qj-P1-Via"/>
-                                <exclude reference="D5h-E8-tiF"/>
                                 <exclude reference="4CM-Gh-JZK"/>
                                 <exclude reference="GjC-jH-cxl"/>
                                 <exclude reference="H9I-u7-6BN"/>
                                 <exclude reference="k4V-Nu-BhU"/>
-                                <exclude reference="zWA-28-MKr"/>
                                 <exclude reference="JFe-fW-qYp"/>
                                 <exclude reference="iUz-lu-BMp"/>
+                                <exclude reference="2qj-P1-Via"/>
+                                <exclude reference="D5h-E8-tiF"/>
                                 <exclude reference="FLR-SO-kyJ"/>
                                 <exclude reference="TMg-2f-7dQ"/>
+                                <exclude reference="zWA-28-MKr"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
                             <mask key="constraints">
+                                <include reference="4CM-Gh-JZK"/>
+                                <include reference="GjC-jH-cxl"/>
+                                <include reference="H9I-u7-6BN"/>
+                                <exclude reference="hAp-iK-7A2"/>
+                                <include reference="k4V-Nu-BhU"/>
+                                <include reference="JFe-fW-qYp"/>
+                                <exclude reference="UjB-9u-zg9"/>
+                                <exclude reference="dgg-m7-9na"/>
+                                <exclude reference="h1Y-mW-bEH"/>
+                                <include reference="iUz-lu-BMp"/>
                                 <include reference="2qj-P1-Via"/>
                                 <exclude reference="CrW-0c-MEa"/>
                                 <include reference="D5h-E8-tiF"/>
                                 <exclude reference="Okr-hn-YFb"/>
                                 <exclude reference="P97-Wb-7Bx"/>
                                 <exclude reference="QCm-Iq-Mih"/>
-                                <include reference="4CM-Gh-JZK"/>
-                                <include reference="GjC-jH-cxl"/>
-                                <include reference="H9I-u7-6BN"/>
-                                <exclude reference="hAp-iK-7A2"/>
-                                <include reference="k4V-Nu-BhU"/>
-                                <exclude reference="OOS-uc-C8C"/>
-                                <include reference="zWA-28-MKr"/>
-                                <include reference="JFe-fW-qYp"/>
-                                <exclude reference="UjB-9u-zg9"/>
-                                <exclude reference="dgg-m7-9na"/>
-                                <exclude reference="h1Y-mW-bEH"/>
-                                <include reference="iUz-lu-BMp"/>
                                 <exclude reference="3GN-my-rua"/>
                                 <include reference="FLR-SO-kyJ"/>
                                 <include reference="TMg-2f-7dQ"/>
                                 <exclude reference="aPn-wW-7gz"/>
+                                <exclude reference="OOS-uc-C8C"/>
+                                <include reference="zWA-28-MKr"/>
                             </mask>
                         </variation>
                     </view>
@@ -286,21 +343,49 @@
                                 <color key="sectionIndexBackgroundColor" red="0.98624199628829956" green="0.7796865701675415" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="sectionIndexTrackingBackgroundColor" red="0.98624199629999998" green="0.77968657019999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" reuseIdentifier="ClipperCell" id="ic4-z5-Olz" customClass="ClipperCellTableViewCell" customModule="ClipperFan" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="92" width="580" height="200"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" reuseIdentifier="EsportaCell" rowHeight="53" id="ic4-z5-Olz" userLabel="EsportaCell" customClass="EsportaCollezioneTableViewCell" customModule="ClipperFan" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="92" width="580" height="53"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ic4-z5-Olz" id="sG1-RC-9Sw">
+                                            <rect key="frame" x="0.0" y="0.0" width="580" height="52"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZLc-3D-Gb0" customClass="MQXButton" customModule="ClipperFan" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="8" width="580" height="36"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <state key="normal" title="Esporta Collezione">
+                                                        <color key="titleColor" red="0.98431372549999996" green="0.78039215689999997" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="premutoEsportaCollezione:" destination="ic4-z5-Olz" eventType="touchUpInside" id="kRP-uh-NET"/>
+                                                        <segue destination="rPC-xu-EVk" kind="show" identifier="esportaCellToEsportaCollezione" id="Xsv-Lu-nk8"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ZLc-3D-Gb0" firstAttribute="leading" secondItem="sG1-RC-9Sw" secondAttribute="leadingMargin" constant="-8" id="B2H-5o-YDY"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="ZLc-3D-Gb0" secondAttribute="bottom" id="Prc-0L-KKm"/>
+                                                <constraint firstItem="ZLc-3D-Gb0" firstAttribute="trailing" secondItem="sG1-RC-9Sw" secondAttribute="trailingMargin" constant="8" id="pW2-ef-vOT"/>
+                                                <constraint firstItem="ZLc-3D-Gb0" firstAttribute="top" secondItem="sG1-RC-9Sw" secondAttribute="topMargin" id="xXu-7q-BmJ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.98624199628829956" green="0.7796865701675415" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" reuseIdentifier="ClipperCell" id="ZgX-KG-U5d" customClass="ClipperCellTableViewCell" customModule="ClipperFan" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="145" width="580" height="200"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZgX-KG-U5d" id="VkJ-4n-A92">
                                             <rect key="frame" x="0.0" y="0.0" width="580" height="199"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Tpi-nI-HQE">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="g5N-Fj-QRE">
                                                     <rect key="frame" x="0.0" y="4" width="580" height="191"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F9b-MC-Oy8" customClass="PaddedLabel" customModule="ClipperFan" customModuleProvider="target">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3eL-Mh-5Ro" customClass="PaddedLabel" customModule="ClipperFan" customModuleProvider="target">
                                                     <rect key="frame" x="128" y="12" width="444" height="34"/>
                                                     <color key="backgroundColor" red="0.98624199629999998" green="0.77968657019999998" blue="0.0" alpha="0.53000000000000003" colorSpace="calibratedRGB"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="34" id="IVe-kE-dLS"/>
+                                                        <constraint firstAttribute="height" constant="34" id="00T-Vs-nTc"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -311,13 +396,13 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4hh-ke-w0o">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hVn-EK-Rob">
                                                     <rect key="frame" x="8" y="8" width="110" height="183"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="110" id="GyX-sK-Le8"/>
+                                                        <constraint firstAttribute="width" constant="110" id="pRP-Gx-VRC"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="59c-yp-3VU" customClass="PaddedLabel" customModule="ClipperFan" customModuleProvider="target">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="ZLf-lm-nFi" customClass="PaddedLabel" customModule="ClipperFan" customModuleProvider="target">
                                                     <rect key="frame" x="128" y="64" width="444" height="109"/>
                                                     <color key="backgroundColor" red="0.98624199629999998" green="0.77968657019999998" blue="0.0" alpha="0.53000000000000003" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Italic" family="Avenir Next" pointSize="18"/>
@@ -331,28 +416,28 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottomMargin" secondItem="4hh-ke-w0o" secondAttribute="bottom" id="4kL-py-BgJ"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="F9b-MC-Oy8" secondAttribute="trailing" id="5dI-bY-Z16"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="Tpi-nI-HQE" secondAttribute="bottom" constant="-4" id="AyA-KP-lFv"/>
-                                                <constraint firstItem="59c-yp-3VU" firstAttribute="leading" secondItem="4hh-ke-w0o" secondAttribute="trailing" constant="10" id="Btp-aV-5LI"/>
-                                                <constraint firstItem="Tpi-nI-HQE" firstAttribute="top" secondItem="sG1-RC-9Sw" secondAttribute="topMargin" constant="-4" id="NmE-VI-jhh"/>
-                                                <constraint firstItem="4hh-ke-w0o" firstAttribute="leading" secondItem="sG1-RC-9Sw" secondAttribute="leadingMargin" id="YdP-Iv-2aM"/>
-                                                <constraint firstItem="4hh-ke-w0o" firstAttribute="top" secondItem="sG1-RC-9Sw" secondAttribute="topMargin" id="ZaQ-GR-I53"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="59c-yp-3VU" secondAttribute="trailing" id="bFw-hX-61x"/>
-                                                <constraint firstItem="59c-yp-3VU" firstAttribute="top" secondItem="F9b-MC-Oy8" secondAttribute="bottom" constant="18" id="cra-ku-r3r"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="59c-yp-3VU" secondAttribute="bottom" constant="18" id="h0N-p8-GTp"/>
-                                                <constraint firstItem="F9b-MC-Oy8" firstAttribute="leading" secondItem="4hh-ke-w0o" secondAttribute="trailing" constant="10" id="ifq-ZR-dE1"/>
-                                                <constraint firstItem="F9b-MC-Oy8" firstAttribute="top" secondItem="sG1-RC-9Sw" secondAttribute="topMargin" constant="4" id="rfo-3M-FHZ"/>
-                                                <constraint firstItem="Tpi-nI-HQE" firstAttribute="leading" secondItem="sG1-RC-9Sw" secondAttribute="leadingMargin" constant="-8" id="roF-bD-SpR"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="Tpi-nI-HQE" secondAttribute="trailing" constant="-8" id="x9Q-8z-bkZ"/>
+                                                <constraint firstItem="3eL-Mh-5Ro" firstAttribute="top" secondItem="VkJ-4n-A92" secondAttribute="topMargin" constant="4" id="0RT-jC-RcQ"/>
+                                                <constraint firstItem="ZLf-lm-nFi" firstAttribute="top" secondItem="3eL-Mh-5Ro" secondAttribute="bottom" constant="18" id="1Lk-FR-iHh"/>
+                                                <constraint firstItem="hVn-EK-Rob" firstAttribute="leading" secondItem="VkJ-4n-A92" secondAttribute="leadingMargin" id="8C1-xX-VjI"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="3eL-Mh-5Ro" secondAttribute="trailing" id="B0H-Ff-CX2"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="ZLf-lm-nFi" secondAttribute="trailing" id="FVx-5Y-qiy"/>
+                                                <constraint firstItem="ZLf-lm-nFi" firstAttribute="leading" secondItem="hVn-EK-Rob" secondAttribute="trailing" constant="10" id="M43-Iq-eUK"/>
+                                                <constraint firstItem="g5N-Fj-QRE" firstAttribute="leading" secondItem="VkJ-4n-A92" secondAttribute="leadingMargin" constant="-8" id="NkV-ZB-Z6N"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="hVn-EK-Rob" secondAttribute="bottom" id="Nl2-Bn-Cve"/>
+                                                <constraint firstItem="g5N-Fj-QRE" firstAttribute="top" secondItem="VkJ-4n-A92" secondAttribute="topMargin" constant="-4" id="eJr-Fo-oj8"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="ZLf-lm-nFi" secondAttribute="bottom" constant="18" id="eYc-Ok-MsJ"/>
+                                                <constraint firstItem="hVn-EK-Rob" firstAttribute="top" secondItem="VkJ-4n-A92" secondAttribute="topMargin" id="fqM-YO-9Ua"/>
+                                                <constraint firstItem="3eL-Mh-5Ro" firstAttribute="leading" secondItem="hVn-EK-Rob" secondAttribute="trailing" constant="10" id="hQc-4g-ujw"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="g5N-Fj-QRE" secondAttribute="bottom" constant="-4" id="q6a-qG-gUg"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="g5N-Fj-QRE" secondAttribute="trailing" constant="-8" id="sa7-EW-b1s"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.98624199628829956" green="0.7796865701675415" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.98624199629999998" green="0.77968657019999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
-                                            <outlet property="immagine" destination="4hh-ke-w0o" id="awb-HP-ZPv"/>
-                                            <outlet property="immagineSfondo" destination="Tpi-nI-HQE" id="I1j-8N-dxC"/>
-                                            <outlet property="labelDescrizione" destination="59c-yp-3VU" id="bBH-CN-wPG"/>
-                                            <outlet property="labelNome" destination="F9b-MC-Oy8" id="jWC-ge-mxP"/>
+                                            <outlet property="immagine" destination="hVn-EK-Rob" id="Bmd-z3-di9"/>
+                                            <outlet property="immagineSfondo" destination="g5N-Fj-QRE" id="D3M-2m-qG0"/>
+                                            <outlet property="labelDescrizione" destination="ZLf-lm-nFi" id="0uX-CG-lGG"/>
+                                            <outlet property="labelNome" destination="3eL-Mh-5Ro" id="1kf-Ni-Y87"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -859,6 +944,6 @@
         <image name="clipperSearch" width="341" height="527"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="7tx-01-5jE"/>
+        <segue reference="sTw-z5-oHU"/>
     </inferredMetricsTieBreakers>
 </document>

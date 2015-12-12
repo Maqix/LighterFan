@@ -44,6 +44,13 @@ class ClipperCellTableViewCell: UITableViewCell {
             immagineSfondo.layer.borderWidth = 1
             immagineSfondo.clipsToBounds = true
             
+            /*
+            immagine.layer.cornerRadius = immagine.frame.size.height / 2
+            immagine.layer.borderColor = UIColor.blackColor().CGColor
+            immagine.layer.borderWidth = 1
+            immagine.clipsToBounds = true
+            */
+            
             //let coloreMedio = AverageColorFromImage((datiClipper?.immagine)!)
             //let contrastColor = ContrastColorOf(coloreMedio, returnFlat: false)
             labelDescrizione.textColor = UIColor.blackColor()

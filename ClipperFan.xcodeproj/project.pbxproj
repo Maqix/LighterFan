@@ -41,6 +41,9 @@
 		391E7A5D1C18744E0067F1B3 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 391E7A4F1C18744E0067F1B3 /* Info.plist */; };
 		391E7A601C1874780067F1B3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 391E7A5F1C1874780067F1B3 /* QuartzCore.framework */; };
 		391E7A621C18747F0067F1B3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 391E7A611C18747F0067F1B3 /* CoreGraphics.framework */; };
+		395BD2D81C1A114400C4A9E0 /* EsportaCollezioneTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395BD2D71C1A114400C4A9E0 /* EsportaCollezioneTableViewCell.swift */; };
+		395BD2DA1C1B165200C4A9E0 /* EsportaCollezioneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395BD2D91C1B165200C4A9E0 /* EsportaCollezioneViewController.swift */; };
+		395BD2DE1C1B27BB00C4A9E0 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 395BD2DD1C1B27BB00C4A9E0 /* MBProgressHUD.m */; };
 		399925A51C170A980008A1A1 /* HFImageEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 399925A21C170A980008A1A1 /* HFImageEditorViewController.m */; };
 		399925A61C170A980008A1A1 /* HFImageEditorFrameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 399925A41C170A980008A1A1 /* HFImageEditorFrameView.m */; };
 		399925A81C170C290008A1A1 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 399925A71C170C290008A1A1 /* AssetsLibrary.framework */; };
@@ -48,6 +51,7 @@
 		399925B01C170CA30008A1A1 /* DemoImageEditor.m in Sources */ = {isa = PBXBuildFile; fileRef = 399925AD1C170CA30008A1A1 /* DemoImageEditor.m */; };
 		399925B21C175F4F0008A1A1 /* TabellaClipperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399925B11C175F4F0008A1A1 /* TabellaClipperViewController.swift */; };
 		39F54C791C199ABD00156850 /* UIImageEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F54C781C199ABD00156850 /* UIImageEffects.swift */; };
+		39F909711C1BA3E1007E5A43 /* EXPhotoViewer.m in Sources */ = {isa = PBXBuildFile; fileRef = 39F909701C1BA3E1007E5A43 /* EXPhotoViewer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +118,10 @@
 		391E7A4F1C18744E0067F1B3 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		391E7A5F1C1874780067F1B3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		391E7A611C18747F0067F1B3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		395BD2D71C1A114400C4A9E0 /* EsportaCollezioneTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EsportaCollezioneTableViewCell.swift; sourceTree = "<group>"; };
+		395BD2D91C1B165200C4A9E0 /* EsportaCollezioneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EsportaCollezioneViewController.swift; sourceTree = "<group>"; };
+		395BD2DC1C1B27BB00C4A9E0 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		395BD2DD1C1B27BB00C4A9E0 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		3999259F1C170A970008A1A1 /* ClipperFan-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ClipperFan-Bridging-Header.h"; sourceTree = "<group>"; };
 		399925A01C170A980008A1A1 /* HFImageEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFImageEditorViewController.h; sourceTree = "<group>"; };
 		399925A11C170A980008A1A1 /* HFImageEditorViewController+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HFImageEditorViewController+Private.h"; sourceTree = "<group>"; };
@@ -126,6 +134,8 @@
 		399925AD1C170CA30008A1A1 /* DemoImageEditor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoImageEditor.m; sourceTree = "<group>"; };
 		399925B11C175F4F0008A1A1 /* TabellaClipperViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabellaClipperViewController.swift; sourceTree = "<group>"; };
 		39F54C781C199ABD00156850 /* UIImageEffects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageEffects.swift; sourceTree = "<group>"; };
+		39F9096F1C1BA3E1007E5A43 /* EXPhotoViewer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPhotoViewer.h; sourceTree = "<group>"; };
+		39F909701C1BA3E1007E5A43 /* EXPhotoViewer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXPhotoViewer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,8 +192,8 @@
 				390B05511C15D3090044D83D /* Views */,
 				390B04CF1C14CD290044D83D /* Assets.xcassets */,
 				390B04C51C14CD290044D83D /* AppDelegate.swift */,
-				390B04D11C14CD290044D83D /* LaunchScreen.storyboard */,
 				390B04C91C14CD290044D83D /* Main.storyboard */,
+				390B04D11C14CD290044D83D /* LaunchScreen.storyboard */,
 				390B04D41C14CD290044D83D /* Info.plist */,
 				390B04CC1C14CD290044D83D /* ClipperFan.xcdatamodeld */,
 			);
@@ -206,6 +216,7 @@
 				399925B11C175F4F0008A1A1 /* TabellaClipperViewController.swift */,
 				39034B4E1C18C8050089E2C6 /* ScaffaleViewController.swift */,
 				390B05541C15E45B0044D83D /* MostraClipperViewController.swift */,
+				395BD2D91C1B165200C4A9E0 /* EsportaCollezioneViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -234,6 +245,7 @@
 				390B054F1C15D2F90044D83D /* ClipperCellTableViewCell.swift */,
 				39034B4C1C18C71B0089E2C6 /* ClipperCollectionViewCell.swift */,
 				391E7A311C18716B0067F1B3 /* MQXButton.swift */,
+				395BD2D71C1A114400C4A9E0 /* EsportaCollezioneTableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -300,10 +312,21 @@
 		392EE58A1C19C77D00815A71 /* Librerie */ = {
 			isa = PBXGroup;
 			children = (
+				39F9096E1C1BA3CB007E5A43 /* EXPhotoViewer */,
+				395BD2DB1C1B27A900C4A9E0 /* MBProgressHUD */,
 				391E7A5E1C1874570067F1B3 /* Chameleon */,
 				3999259E1C170A810008A1A1 /* HFImageEditorViewController */,
 			);
 			name = Librerie;
+			sourceTree = "<group>";
+		};
+		395BD2DB1C1B27A900C4A9E0 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				395BD2DC1C1B27BB00C4A9E0 /* MBProgressHUD.h */,
+				395BD2DD1C1B27BB00C4A9E0 /* MBProgressHUD.m */,
+			);
+			name = MBProgressHUD;
 			sourceTree = "<group>";
 		};
 		3999259E1C170A810008A1A1 /* HFImageEditorViewController */ = {
@@ -316,6 +339,15 @@
 				399925A41C170A980008A1A1 /* HFImageEditorFrameView.m */,
 			);
 			name = HFImageEditorViewController;
+			sourceTree = "<group>";
+		};
+		39F9096E1C1BA3CB007E5A43 /* EXPhotoViewer */ = {
+			isa = PBXGroup;
+			children = (
+				39F9096F1C1BA3E1007E5A43 /* EXPhotoViewer.h */,
+				39F909701C1BA3E1007E5A43 /* EXPhotoViewer.m */,
+			);
+			name = EXPhotoViewer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -430,6 +462,7 @@
 				391E7A541C18744E0067F1B3 /* UIButton+Chameleon.m in Sources */,
 				391E7A581C18744E0067F1B3 /* UILabel+Chameleon.m in Sources */,
 				391E7A591C18744E0067F1B3 /* UINavigationController+Chameleon.m in Sources */,
+				395BD2D81C1A114400C4A9E0 /* EsportaCollezioneTableViewCell.swift in Sources */,
 				390B054B1C1593800044D83D /* Clipper.swift in Sources */,
 				399925A51C170A980008A1A1 /* HFImageEditorViewController.m in Sources */,
 				390B05421C158D5B0044D83D /* ClipperController.swift in Sources */,
@@ -441,6 +474,7 @@
 				391E7A551C18744E0067F1B3 /* UIColor+Chameleon.m in Sources */,
 				390B054A1C1593800044D83D /* Clipper+CoreDataProperties.swift in Sources */,
 				390B05501C15D2F90044D83D /* ClipperCellTableViewCell.swift in Sources */,
+				395BD2DA1C1B165200C4A9E0 /* EsportaCollezioneViewController.swift in Sources */,
 				391E7A531C18744E0067F1B3 /* NSArray+Chameleon.m in Sources */,
 				391E7A561C18744E0067F1B3 /* UIColor+ChameleonPrivate.m in Sources */,
 				390B05551C15E45B0044D83D /* MostraClipperViewController.swift in Sources */,
@@ -448,6 +482,8 @@
 				391E7A5C1C18744E0067F1B3 /* UIAppearance+Swift.m in Sources */,
 				391E7A501C18744E0067F1B3 /* ChameleonShorthand.swift in Sources */,
 				390B05471C158F0E0044D83D /* Util.swift in Sources */,
+				39F909711C1BA3E1007E5A43 /* EXPhotoViewer.m in Sources */,
+				395BD2DE1C1B27BB00C4A9E0 /* MBProgressHUD.m in Sources */,
 				391E7A321C18716B0067F1B3 /* MQXButton.swift in Sources */,
 				390B04C61C14CD290044D83D /* AppDelegate.swift in Sources */,
 				390B04CE1C14CD290044D83D /* ClipperFan.xcdatamodeld in Sources */,
